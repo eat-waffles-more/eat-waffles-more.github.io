@@ -22,7 +22,7 @@ window.onload = () => {
 
 // Toggle profile page visibility
 userProfile.addEventListener('click', () => {
-    profilePage.classList.toggle('hidden');
+    profilePage.classList.toggle('show');
 });
 
 // Save profile data to localStorage
