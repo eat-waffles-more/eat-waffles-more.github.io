@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const iframe = document.getElementById('myIframe');
             iframe.src = button.link;
             const name = document.getElementById('game-name');
-            name.innerText = button.name;
+            game-name.innerText = button.name;
         });
 
         return a;
