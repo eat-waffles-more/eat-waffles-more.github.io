@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/viewers.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <center>
+<br>
+<br>
+<br>
+  <div id="iframe-container">
+    <iframe id="myIframe" src="" frameborder="none"></iframe>
+  </div>
+
+  <div class="buttons-container">
+    <button onclick="goHome()"><i class="fa fa-home fa-lg"></i></button>
+    <button id=fullscreenButton onclick="makeFullscreen()"><i class="fa-solid fa-up-right-and-down-left-from-center fa-lg"></i></button>
+    <button id=reloadButton onclick="reloadIframe()"><i class="fa fa-refresh fa-lg"></i></button>
+    
+  </div>
+
+  <script>
+  document.title = 'Waffles | Play';
+
+        window.addEventListener('load', function() {
+            const gameLink = sessionStorage.getItem('gameLink');
+            if (gameLink) {
+                redirectIframe(gameLink, 4750);
+            } else {
+                window.location.href = "/games";
+            }
+        });
+
+function reloadIframe() {
+    const iframe = document.getElementById('myIframe');
+    const currentSrc = iframe.src;
+    const reloadButton = document.getElementById('reloadButton');
+
+    // Ensure the button has the icon
+    reloadButton.innerHTML = "<i class='fa fa-refresh fa-lg'></i>";
+
+    // Reload the iframe
+    iframe.src = '';
+    iframe.src = currentSrc;
+}
+
+// Add hover effect for spinning
+document.addEventListener("DOMContentLoaded", function () {
+    const reloadButton = document.getElementById('reloadButton');
+    
+    reloadButton.addEventListener("mouseenter", function () {
+        reloadButton.querySelector("i").classList.add("fa-spin");
+    });
+
+    reloadButton.addEventListener("mouseleave", function () {
+        reloadButton.querySelector("i").classList.remove("fa-spin");
+    });
+});
+        function reloadIframe() {
+            const iframe = document.getElementById('myIframe');
+            const currentSrc = iframe.src;
+          const reloadButton = document.getElementById('reloadButton');
+reloadButton.innerHTML = "<i class='fa fa-refresh fa-lg fa-spin'></i>";
+  iframe.src = '';
+            iframe.src = currentSrc;
+        }
+
+        function makeFullscreen() {
+            const iframe = document.getElementById('myIframe');
+            const iframeContainer = document.getElementById('iframe-container');
+            
+            // Request fullscreen on the iframe
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.mozRequestFullScreen) {
+                iframe.mozRequestFullScreen();
+            } else if (iframe.webkitRequestFullscreen) {
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) {
+                iframe.msRequestFullscreen();
+            }
+
+            // Add a class to keep the navbar visible during fullscreen
+            iframeContainer.classList.add('fullscreen');
+        }
+
+        function goHome() {
+            window.location.href = '/games';
+        }
+
+        function redirectIframe(newSrc, delay) {
+            const iframe = document.getElementById('myIframe');
+            iframe.src = "/loading.html";
+            setTimeout(() => {
+                iframe.src = newSrc;
+            }, delay);
+        }
+
+        // Listen for when exiting fullscreen to remove the class
+        document.addEventListener('fullscreenchange', function() {
+            if (!document.fullscreenElement) {
+                document.getElementById('iframe-container').classList.remove('fullscreen');
+            }
+        });
+
+        document.addEventListener('webkitfullscreenchange', function() {
+            if (!document.webkitFullscreenElement) {
+                document.getElementById('iframe-container').classList.remove('fullscreen');
+            }
+        });
+
+        document.addEventListener('mozfullscreenchange', function() {
+            if (!document.mozFullScreenElement) {
+                document.getElementById('iframe-container').classList.remove('fullscreen');
+            }
+        });
+
+        document.addEventListener('msfullscreenchange', function() {
+            if (!document.msFullscreenElement) {
+                document.getElementById('iframe-container').classList.remove('fullscreen');
+            }
+        });
+
+
+  </script>
+
+    </center>
+    <div id="particles-js"></div>
+    <script src="/js/profile.js"></script>
+
+    <script src="/js/particles.js"></script>
+    <script src="/js/particles-config.js"></script>
+</body>
+</html>

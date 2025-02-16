@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Waffles</title>
+        
+        <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/navbar.css">
+        <script src="/js/main.js"></script>
+    </head>
+<script src="/js/navbar.js"></script><div id="navbar-container"></div>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+     
+    </style>
+</head>
+<body>
+
+
+
+    <script src="/js/profile.js"></script>
+</div>
+<center>
+    
+<br>
+<img class="waffles" src="/images/favicon.png" width="150px" height="150px">
+<br>
+<br>
+</center>
+<div id="particles-js"></div>
+<script src="/js/particles.js"></script>
+<script src="/js/particles-config.js"></script>
+<style>
+  #edit {
+    width: 50%;
+    background-color: pink;  /* Light blue background */
+    padding: 20px;
+    border-radius: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  #edit label {
+    display: block;
+    margin-bottom: 8px;
+    color: tan;  /* Tan color for labels */
+    font-weight: bold;
+  }
+
+  #edit input[type="text"],
+  #edit input[type="file"] {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(210, 180, 140, 1);
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    background-color: lightblue;
+  }
+
+  #edit button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: rgba(210, 180, 140, 1);
+    color: lightblue;
+    border: 3px solid lightblue;
+    transition: background-color 0.5s;
+    margin-left: 10px;
+    outline: none;
+  }
+
+  #edit button:hover {
+    background-color: lightblue;
+    color: rgba(210, 180, 140, 1);
+    border:2px solid lightblue;
+    transform: scale(0.97);
+  }
+</style>
+<center>
+<div id="edit">
+  <label for="avatar-url">Avatar URL or Upload File</label>
+  <input type="text" id="avatar-url" placeholder="Enter Avatar URL (optional)">
+  <input type="file" id="avatar-file" accept="image/*">
+  <label for="user-name-input">Name</label>
+  <input type="text" id="user-name-input" placeholder="Enter Your Name">
+  <div></div>
+  <button onclick="saveProfile()">Save</button>
+</div>
+</center>
