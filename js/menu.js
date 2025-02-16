@@ -101,6 +101,8 @@ document.addEventListener('DOMContentLoaded', function () {
             // Update iframe on the current page instead of navigating to viewer.html
             const iframe = document.getElementById('myIframe');
             iframe.src = button.link;
+            const name = document.getElementById('game-name');
+            name.innerText = button.name;
         });
 
         return a;
