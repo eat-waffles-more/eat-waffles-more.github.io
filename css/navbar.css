@@ -69,6 +69,7 @@
   align-items: right;
   gap: 10px; /* Space between avatar and username */
   margin-right: 20px; /* Add extra margin to separate profile from icons */
+  margin: 10;
 }
 
 /* Avatar styling */
