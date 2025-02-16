@@ -1,0 +1,99 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  z-index: 1000;
+  background-color: rgba(210, 180, 140, 0.7); /* Tan background with slight transparency */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 10px rgba(173, 216, 230, 0.5); /* Light blue glow for shadow */
+}
+
+.nav-left-bg, .nav-right-bg {
+  background-color: rgba(173, 216, 230, 0.7); /* Light blue background with transparency */
+  backdrop-filter: blur(6px);
+  padding: 3px 7px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.5); /* Pink glow effect */
+}
+
+.logo img {
+  height: 65px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 5px; /* Increased gap for better spacing */
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-decoration: none;
+  background-color: rgba(255, 105, 180, 0.7); /* Pink background for the icons */
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(173, 216, 230, 0.6); /* Light blue shadow for icons */
+}
+
+.nav-links a:hover {
+  background-color: rgba(210, 180, 140, 1); /* Tan background on hover */
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.8); /* Pink shadow on hover */
+  transform: scale(1.1);
+}
+
+.nav-links a i {
+  color: white;
+  font-size: 1.5em;
+  text-shadow: 0 0 5px rgba(255, 105, 180, 0.8); /* Pink text shadow */
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover i {
+  transform: scale(1.3);
+}
+.user-profile {
+  display: flex;
+  align-items: right;
+  gap: 10px; /* Space between avatar and username */
+  margin-right: 20px; /* Add extra margin to separate profile from icons */
+}
+
+/* Avatar styling */
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid white; /* Border around avatar */
+}
+.avatar:hover {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 3px solid lightgreen; /* Border around avatar */
+}
+
+/* Username styling */
+#user-name {
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap; /* Prevents text from wrapping */
+  font-family: Space Grotesk;
+  text-decoration: none; /* Ensure no underline */
+  display: inline-block; /* Make sure it behaves like text */
+  line-height: 36px; /* Align the text vertically with the avatar */
+  text-decoration: none; /* Remove underline from all links */
+}
