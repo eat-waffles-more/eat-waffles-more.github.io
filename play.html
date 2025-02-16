@@ -32,6 +32,7 @@
             const gameLink = sessionStorage.getItem('gameLink');
             const gameName = sessionStorage.getItem('gameName');
             if (gameLink && gameName) {
+                document.getElementById('game-name').innerText = gameName; // Add this line to set the game name
                 redirectIframe(gameLink, 4750);
             } else {
                 window.location.href = "/games";
