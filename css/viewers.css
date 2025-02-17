@@ -33,7 +33,7 @@ iframe {
 #game-name {
   position: absolute;
   bottom: 170px;
-  right: 170px;
+  left: 170px;
   color: white;
 }
 
