@@ -27,12 +27,14 @@ iframe {
 
 .buttons-container {
   position: absolute;
-  bottom: 170px;
-  right: 170px;
+  bottom: 10px; /* Move the buttons to the bottom-left */
+  left: 10px; /* Move the buttons to the bottom-left */
+}
 
 #game-name {
-  bottom: 170px;
-  left: 170px;
+  position: absolute;
+  bottom: 10px; /* Move the game name to the bottom-right */
+  right: 10px; /* Move the game name to the bottom-right */
   color: white;
 }
 
