@@ -36,7 +36,7 @@ iframe {
   bottom: 10px; /* Move the game name to the bottom-right */
   right: 10px; /* Align game name to the right edge of the iframe */
   color: white;
-  font-size: 20px;
+  font-size: 40;
 }
 
 button {
@@ -53,7 +53,7 @@ button {
 #game-container {
   margin: 20px auto;
   width: 80%;
-  height: 600px; /* Set height to 500px */
+  height: 550px; /* Set height to 550px */
   border: none;
   position: relative;
   background-color: none;
