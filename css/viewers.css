@@ -52,13 +52,15 @@ button {
   border: 3px solid lightblue;
 }
 #game-container {
-    margin: 4px auto;
-    width: 80%;
-    height: 570px; /* Set height to 570px */
-    border: none;
-    background-color: none;
-    opacity: 1;
+  margin: 4px auto;
+  width: 80%;
+  height: 570px; /* Set height to 570px */
+  border: none;
+  background-color: none;
+  opacity: 1;
+  margin-bottom: 10px;
 }
+
 button:hover {
   background-color: lightblue;
   color: rgba(210, 180, 140, 1);
