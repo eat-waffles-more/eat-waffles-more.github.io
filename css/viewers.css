@@ -52,7 +52,9 @@ button {
   border: 3px solid lightblue;
 }
 #game-container {
-  margin: 20px auto;
+  margin-top: 10px auto;
+  margin-left: 20px auto;
+  margin-right: 20px auto;
   width: 80%;
   height: 570px; /* Set height to 570px */
   border: none;
