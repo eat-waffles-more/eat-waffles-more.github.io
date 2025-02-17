@@ -81,8 +81,8 @@
   border: 2px solid white; /* Border around avatar */
 }
 .avatar:hover {
-  width: 36px;
-  height: 36px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   border: 3px solid lightgreen; /* Border around avatar */
 }
@@ -91,7 +91,7 @@
 #user-name {
   color: white;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 17px;
   white-space: nowrap; /* Prevents text from wrapping */
   font-family: Space Grotesk;
   text-decoration: none; /* Ensure no underline */
