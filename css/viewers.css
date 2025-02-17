@@ -56,7 +56,6 @@ button {
     width: 80%;
     height: 570px; /* Set height to 570px */
     border: none;
-    position: relative;
     background-color: none;
     opacity: 1;
     display: flex;
