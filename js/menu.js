@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: "Low's Adventures 3", image: '/images/lowsadventures3.png', link: 'https://www.hoodamath.com/mobile/games/lows-adventures-3/game.html?nocheckorient=1', path: '/play', favorite: false },
         { name: 'Draw the Rest', image: '/images/drawtherest.png', link: 'https://www.hoodamath.com/mobile/games/draw-the-rest/game.html?nocheckorient=1', path: '/play', favorite: false },
         { name: 'Draw the Rest', image: '/images/drawtherest.png', link: 'https://www.hoodamath.com/mobile/games/car-rush/game.html?nocheckorient=1', path: '/play', favorite: false },
+        { name: 'Draw the Rest', image: '/images/drawtherest.png', link: 'https://www.hoodamath.com/mobile/games/opposite-day/game.html?nocheckorient=1', path: '/play', favorite: false },
     ];
 
     const buttonContainer = document.getElementById('buttonContainer');
