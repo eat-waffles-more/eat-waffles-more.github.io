@@ -9,6 +9,7 @@ body {
     font-family: Space Grotesk;
     margin-top: 60px;
     overflow-x: hidden;
+    text-decoration: none; /* Remove underline from all links */
 }
 #particles-js {
   position: fixed;
