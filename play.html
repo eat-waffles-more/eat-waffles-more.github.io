@@ -13,22 +13,26 @@
     <center>
     <br><br><br>
     <div id="game-container">
-    <div id="iframe-container">
-        <iframe id="myIframe" src="" frameborder="none"></iframe>
+        <div id="iframe-container">
+            <iframe id="myIframe" src="" frameborder="none"></iframe>
+        </div>
+
+        <!-- Game name and buttons moved below iframe -->
+        <div class="buttons-container">
+            <h2 id="game-name">sdf</h2>
+            <button onclick="goHome()">
+                <i class='fa fa-house fa-lg'></i>
+            </button>
+            <button id="fullscreenButton" onclick="makeFullscreen()">
+                <i class="fa-solid fa-up-right-and-down-left-from-center fa-lg"></i>
+            </button>
+            <button id="reloadButton" onclick="reloadIframe()">
+                <i class="fa fa-refresh fa-lg"></i>
+            </button>
+        </div>
     </div>
-    <div class="buttons-container">
-        <h2 id="game-name">sdf</h2>
-        <button onclick="goHome()">
-            <i class='fa fa-house fa-lg'></i>
-        </button>
-        <button id="fullscreenButton" onclick="makeFullscreen()">
-            <i class="fa-solid fa-up-right-and-down-left-from-center fa-lg"></i>
-        </button>
-        <button id="reloadButton" onclick="reloadIframe()">
-            <i class="fa fa-refresh fa-lg"></i>
-        </button>
-    </div>
-</div>
+    </center>
+
     <script>
     document.title = 'Waffles | Play';
 
@@ -126,7 +130,6 @@
     });
     </script>
 
-    </center>
     <div id="particles-js"></div>
     <script src="/js/profile.js"></script>
     <script src="/js/particles.js"></script>
