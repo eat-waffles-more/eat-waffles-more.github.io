@@ -10,13 +10,10 @@ body {
 #iframe-container {
   margin: 20px auto;
   width: 80%;
-  height: 40%;
+  height: 500px; /* Set height to 500px */
   border: 4px solid pink;
   border-radius: 10px;
   position: relative;
-  top: 0;
-  left: 0;
-  transform: none;
   background-color: #000;
 }
 
@@ -26,16 +23,19 @@ iframe {
   border: none;
   border-radius: 10px;
   background-color: black;
-  position: relative;
-  top: 0;
-  left: 0;
-  transform: none;
 }
 
 .buttons-container {
-  margin: 20px auto;
-  margin-left: 0px;
-  float: left;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+#game-name {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: white;
 }
 
 button {
@@ -48,7 +48,6 @@ button {
   border-radius: 5px;
   transition: background-color 0.3s;
   border: 3px solid lightblue;
-  position: relative;
 }
 
 button:hover {
@@ -75,7 +74,4 @@ button:hover {
 
 .home-button:hover {
   content: "\f015"; /* fa-door-open code */
-}
-#game-name {
-  float: right;
 }
