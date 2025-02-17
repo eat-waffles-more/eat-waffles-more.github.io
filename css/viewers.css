@@ -68,12 +68,12 @@ button:hover {
     transform: scale(1.5); /* Adjust size on hover */
 }
 /* Hover effect for home button */
-        .home-button {
-            font-size: 24px; /* Adjust size as needed */
-            transition: all 0.3s ease;
-          content: "\e487"; /* fa-door-open code */
-        }
+.home-button {
+    font-size: 24px; /* Adjust size as needed */
+    transition: all 0.3s ease;
+    content: "\e487"; /* fa-door-open code */
+}
 
-        .home-button:hover {
-            content: "\f015"; /* fa-door-open code */
-        }
+.home-button:hover {
+    content: "\f015"; /* fa-door-open code */
+}
