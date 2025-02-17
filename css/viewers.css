@@ -58,9 +58,6 @@ button {
     border: none;
     background-color: none;
     opacity: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 button:hover {
   background-color: lightblue;
