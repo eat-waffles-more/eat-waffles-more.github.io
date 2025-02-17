@@ -64,6 +64,6 @@ button:hover {
     display: inline-block; /* Needed for transform to work */
 }
 
-.fullscreenButton:hover i {
+#fullscreenButton:hover i {
     transform: scale(1.5); /* Adjust size on hover */
 }
