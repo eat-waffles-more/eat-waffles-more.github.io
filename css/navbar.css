@@ -69,6 +69,7 @@
   align-items: center; /* Center align items vertically */
   gap: 10px; /* Space between avatar and username */
   margin-right: 20px; /* Add extra margin to separate profile from icons *
+  text-decoration: none; /* Remove underline from all links */
 }
 
 /* Avatar styling */
