@@ -24,20 +24,19 @@
     <button id=fullscreenButton onclick="makeFullscreen()"><i class="fa-solid fa-up-right-and-down-left-from-center fa-lg"></i></button>
     <button id=reloadButton onclick="reloadIframe()"><i class="fa fa-refresh fa-lg"></i></button>
   </div>
-
   <script>
   document.title = 'Waffles | Play';
 
         window.addEventListener('load', function() {
-            const gameLink = sessionStorage.getItem('gameLink');
-            const gameName = sessionStorage.getItem('gameName');
-            if (gameLink && gameName) {
-                document.getElementById('game-name').innerText = gameName; // Add this line to set the game name
-                redirectIframe(gameLink, 4750);
-            } else {
-                window.location.href = "/games";
-            }
-        });
+    const gameLink = sessionStorage.getItem('gameLink');
+    const gameName = sessionStorage.getItem('gameName');
+    if (gameLink && gameName) {
+        document.getElementById('game-name').innerText = gameName; // Set the game name
+        redirectIframe(gameLink, 4750);
+    } else {
+        window.location.href = "/games";
+    }
+});
 
 function reloadIframe() {
     const iframe = document.getElementById('myIframe');
