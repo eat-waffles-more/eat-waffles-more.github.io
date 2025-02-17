@@ -66,11 +66,9 @@
 }
 .user-profile {
   display: flex;
-  align-items: right;
+  align-items: center; /* Center align items vertically */
   gap: 10px; /* Space between avatar and username */
-  margin-right: 20px; /* Add extra margin to separate profile from icons */
-  margin: 10;
-  text-decoration: none; /* Ensure no underline */
+  margin-right: 20px; /* Add extra margin to separate profile from icons *
 }
 
 /* Avatar styling */
@@ -96,6 +94,6 @@
   font-family: Space Grotesk;
   text-decoration: none; /* Ensure no underline */
   display: inline-block; /* Make sure it behaves like text */
-  line-height: 36px; /* Align the text vertically with the avatar */
+  line-height: 40px; /* Adjust line height to match avatar size */
   text-decoration: none; /* Remove underline from all links */
 }
