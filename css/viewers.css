@@ -51,11 +51,13 @@ button {
   left: 50%;
   transform: translate(--85%, 85%);
   transition: background-color 0.5s;
+  transform: scale(1);
 }
 
 button:hover {
   background-color: lightblue;
   color: rgba(210, 180, 140, 1);
+  transform: scale(0.9);
 }
 .fullscreenButton i {
     transition: transform 0.3s ease-in-out;
