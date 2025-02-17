@@ -36,6 +36,7 @@ iframe {
   bottom: 10px; /* Move the game name to the bottom-right */
   right: 10px; /* Align game name to the right edge of the iframe */
   color: white;
+  font-size: 20px;
 }
 
 button {
@@ -53,10 +54,10 @@ button {
   margin: 20px auto;
   width: 80%;
   height: 600px; /* Set height to 500px */
-  border: 1px solid lightblue;
-  border-radius: 0px;
+  border: none;
   position: relative;
   background-color: #000;
+  opacity: 0;
 }
 button:hover {
   background-color: lightblue;
