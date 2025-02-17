@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'Draw the Rest', image: '/images/drawtherest.png', link: 'https://www.hoodamath.com/mobile/games/draw-the-rest/game.html?nocheckorient=1', path: '/play', favorite: false },
         { name: 'Car Rush', image: '/images/carrush.png', link: 'https://www.hoodamath.com/mobile/games/car-rush/game.html?nocheckorient=1', path: '/play', favorite: false },
         { name: 'Opposite Day', image: '/images/oppositeday.png', link: 'https://www.hoodamath.com/mobile/games/opposite-day/game.html?nocheckorient=1', path: '/play', favorite: false },
+        { name: 'Wordle', image: '/images/wordle.png', link: 'https://wordleunlimited.org/#google_vignette', path: '/play', favorite: false },
     ];
 
     const buttonContainer = document.getElementById('buttonContainer');
