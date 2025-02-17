@@ -29,7 +29,7 @@
 */
 document.addEventListener('DOMContentLoaded', () => {
   // Check for a logged-in user in localStorage
-  const defaultAvatar = "/images/user.png";
+  const defaultAvatar = "/images/faavicon.png";
   let userAvatar = null;
   const avatarUrl = userAvatar ? userAvatar : defaultAvatar;
   // Construct the navbar HTML
