@@ -71,8 +71,9 @@ button:hover {
         .home-button {
             font-size: 24px; /* Adjust size as needed */
             transition: all 0.3s ease;
+          content: "\e487"; /* fa-door-open code */
         }
 
         .home-button:hover {
-            content: "\f90b"; /* fa-door-open code */
+            content: "\f015"; /* fa-door-open code */
         }
