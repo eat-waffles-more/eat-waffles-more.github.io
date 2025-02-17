@@ -56,8 +56,8 @@ button {
   height: 600px; /* Set height to 500px */
   border: none;
   position: relative;
-  background-color: #000;
-  opacity: 0;
+  background-color: none;
+  opacity: 1;
 }
 button:hover {
   background-color: lightblue;
