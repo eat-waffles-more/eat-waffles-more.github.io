@@ -28,15 +28,15 @@ iframe {
 .buttons-container {
   position: absolute;
   bottom: 10px; /* Move the buttons to the bottom-left */
-  left: 10px; /* Align buttons to the left edge of the iframe */
+  right: 10px; /* Align buttons to the left edge of the iframe */
 }
 
 #game-name {
   position: absolute;
   bottom: 10px; /* Move the game name to the bottom-right */
-  right: 10px; /* Align game name to the right edge of the iframe */
+  left: 10px; /* Align game name to the right edge of the iframe */
   color: white;
-  font-size: 40;
+  font-size: 60;
 }
 
 button {
