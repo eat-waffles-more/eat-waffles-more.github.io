@@ -57,7 +57,7 @@ button {
 button:hover {
   background-color: lightblue;
   color: rgba(210, 180, 140, 1);
-  transform: scale(0.9);
+  transform: scale(0.2);
 }
 .fullscreenButton i {
     transition: transform 0.3s ease-in-out;
@@ -65,5 +65,5 @@ button:hover {
 }
 
 .fullscreenButton:hover i {
-    transform: scale(1.2); /* Adjust size on hover */
+    transform: scale(1.5); /* Adjust size on hover */
 }
