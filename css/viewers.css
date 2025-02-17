@@ -37,6 +37,7 @@ iframe {
   left: 10px; /* Align game name to the right edge of the iframe */
   color: white;
   font-size: 60;
+  padding-top: 10px;
 }
 
 button {
