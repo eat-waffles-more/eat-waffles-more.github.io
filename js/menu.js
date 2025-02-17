@@ -93,17 +93,17 @@ document.addEventListener('DOMContentLoaded', function () {
         a.appendChild(favoriteIcon);
 
         a.addEventListener('click', () => {
-            count++;
-            setClickCount(button.name, count);
-            sessionStorage.setItem('gameLink', button.link);
-            sessionStorage.setItem('gameName', button.name);
+    count++;
+    setClickCount(button.name, count);
+    sessionStorage.setItem('gameLink', button.link);
+    sessionStorage.setItem('gameName', button.name);
 
-            // Update iframe on the current page instead of navigating to viewer.html
-            const iframe = document.getElementById('myIframe');
-            iframe.src = button.link;
-            const name = document.getElementById('game-name');
-            name.innerText = button.name;
-        });
+    // Update iframe on the current page instead of navigating to viewer.html
+    const iframe = document.getElementById('myIframe');
+    iframe.src = button.link;
+    const name = document.getElementById('game-name');
+    name.innerText = button.name; // Correctly set the game name
+});
 
         return a;
     }
