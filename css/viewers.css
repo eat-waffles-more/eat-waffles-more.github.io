@@ -28,15 +28,17 @@
     background-color: black;
 }
 
-#game-container .buttons-container, #game-container #game-name {
+#game-container .button-and-title-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding: 10px;
 }
 
 #game-container .buttons-container {
-    margin-top: 10px;
+    display: flex;
+    gap: 10px;
 }
 
 #game-container .buttons-container button {
