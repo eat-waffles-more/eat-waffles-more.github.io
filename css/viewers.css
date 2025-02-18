@@ -1,4 +1,22 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
+body {
+    margin-top: 10px;
+    background-color: rgba(210, 180, 140, 1);
+    width: 100%;
+    height: 100%;
+    font-family: Space Grotesk;
+    margin-top: 60px;
+    overflow-x: hidden;
+    text-decoration: none; /* Remove underline from all links */
+}
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 #game-container {
     margin: 4px auto;
     width: 60%;
