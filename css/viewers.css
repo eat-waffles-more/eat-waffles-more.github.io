@@ -30,19 +30,14 @@
     right: 10px; /* Align buttons to the left edge of the iframe */
 }
 #game-container .buttons-container button {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding: 10px;
+    padding: 20px;
     background-color: rgba(210, 180, 140, 1);
     color: lightblue;
     transition: background-color 0.7s;
     border: 2px solid lightblue;
 }
 #game-container .buttons-container button:hover {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
     background-color: lightblue;
     color: rgba(210, 180, 140, 1);
     transition: background-color 0.7s;
