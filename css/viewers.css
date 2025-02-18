@@ -1,7 +1,7 @@
 #game-container {
     margin: 4px auto;
-    width: 80%;
-    height: 570px; /* Set height to 570px */
+    width: 60%;
+    height: 500px; /* Set height to 570px */
     border: none;
     position: relative;
     background-color: none;
@@ -42,7 +42,7 @@
 }
 
 #game-container .buttons-container button {
-    padding: 20px;
+    padding: 10px 20px;
     background-color: rgba(210, 180, 140, 1);
     color: lightblue;
     transition: background-color 0.7s;
@@ -50,6 +50,7 @@
 }
 
 #game-container .buttons-container button:hover {
+    padding: 10px 20px;
     background-color: lightblue;
     color: rgba(210, 180, 140, 1);
     transition: background-color 0.7s;
