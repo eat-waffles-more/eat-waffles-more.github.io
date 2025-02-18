@@ -28,7 +28,7 @@
     background-color: black;
 }
 
-#game-container .button-and-title-container {
+#game-container .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
