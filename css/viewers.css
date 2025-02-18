@@ -6,6 +6,10 @@
     position: relative;
     background-color: none;
     opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #game-container #iframe-container {
@@ -24,11 +28,17 @@
     background-color: black;
 }
 
-#game-container .buttons-container {
-    position: absolute;
-    bottom: 10px; /* Move the buttons to the bottom-left */
-    right: 10px; /* Align buttons to the left edge of the iframe */
+#game-container .buttons-container, #game-container #game-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
+
+#game-container .buttons-container {
+    margin-top: 10px;
+}
+
 #game-container .buttons-container button {
     padding: 20px;
     background-color: rgba(210, 180, 140, 1);
@@ -36,24 +46,15 @@
     transition: background-color 0.7s;
     border: 2px solid lightblue;
 }
+
 #game-container .buttons-container button:hover {
-    padding: 20px;
     background-color: lightblue;
     color: rgba(210, 180, 140, 1);
     transition: background-color 0.7s;
     border: none;
 }
-#game-container .container {
-    position: absolute;
-    height: 20%;
-    width: 100%;
-    display: flex;
-}
 
 #game-container #game-name {
-    position: absolute;
-    bottom: 10px; /* Move the game name to the bottom-right */
-    left: 10px; /* Align game name to the right edge of the iframe */
     color: lightblue;
     font-size: 40px;
     padding-top: 10px;
