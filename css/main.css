@@ -32,6 +32,20 @@ h1 {
     margin-left: 50px;
     margin-right: 50px;
 }
+.status {
+    padding: 10px 20px;
+    background-color: rgba(210, 180, 140, 1);
+    color: lightblue;
+    transition: background-color 0.7s;
+    border: 3px solid lightblue;
+}
+.status:hover {
+    padding: 10px 20px;
+    background-color: lightblue;
+    color: rgba(210, 180, 140, 1);
+    transition: background-color 0.7s;
+    border: none;
+}
 #particles-js {
   position: fixed;
   top: 0;
