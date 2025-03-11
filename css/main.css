@@ -20,6 +20,9 @@ h1 {
     background-color: lightblue;
     border: none;
     border-radius: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 20px;
 }
 #plus-description p {
     color: #fff;
