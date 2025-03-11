@@ -15,7 +15,14 @@ h1 {
     color: #fff;
     font-size: 50px;
     font-family: Bebas Neue;
-}    
+}
+p {
+    color: #fff;
+    font-size: 10px;
+    font-family: Bebas Neue;
+    margin-left: 50px;
+    margin-right: 50px;
+}
 #particles-js {
   position: fixed;
   top: 0;
