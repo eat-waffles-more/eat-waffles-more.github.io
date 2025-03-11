@@ -38,6 +38,7 @@ h1 {
     color: lightblue;
     transition: background-color 0.7s;
     border: 3px solid lightblue;
+    border-radius: 5px;
 }
 .status:hover {
     padding: 10px 20px;
@@ -45,6 +46,7 @@ h1 {
     color: rgba(210, 180, 140, 1);
     transition: background-color 0.7s;
     border: none;
+    border-radius: 5px;
 }
 #particles-js {
   position: fixed;
