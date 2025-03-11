@@ -21,7 +21,7 @@ body {
 #game-container {
     margin: 4px auto;
     width: 80%;
-    height: 60%; /* Set height to 570px */
+    height: 70%; /* Set height to 570px */
     border: none;
     position: relative;
     background-color: none;
@@ -80,6 +80,6 @@ body {
 #game-container #game-name {
     color: lightblue;
     font-size: 40px;
-    padding-top: 10px;
+    padding-top: 0px;
     font-family: Bebas Neue;
 }
