@@ -47,7 +47,7 @@
     window.addEventListener('load', function() {
         const gameLink = sessionStorage.getItem('gameLink');
         const gameName = sessionStorage.getItem('gameName');
-        document.getElementById('gameTitle').textContent = 'Waffles: ${gameName}';
+        document.getElementById('gameTitle').textContent = gameName;
         if (gameLink && gameName) {
             document.getElementById('game-name').innerText = gameName; // Set the game name
             // Store gameLink to be used in startGame
