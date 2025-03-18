@@ -13,23 +13,27 @@
     <br><br><br>
     <div id="game-container">
         <div id="iframe-container">
-            <iframe id="myIframe" src="" frameborder="none"></iframe>
+            <!-- Initially hide iframe -->
+            <iframe id="myIframe" src="" frameborder="none" style="display: none;"></iframe>
+
+            <!-- Play Button -->
+            <button id="playButton" onclick="startGame()">Play</button>
         </div>
 
         <!-- Game name and buttons moved below iframe -->
-    <div class="container">
-        <h2 id="game-name"></h2>
-        <div class="buttons-container">
-            <button onclick="goHome()">
-                <i class='fa fa-house fa-lg'></i>
-            </button>
-            <button id="fullscreenButton" onclick="makeFullscreen()">
-                <i class="fa-solid fa-up-right-and-down-left-from-center fa-lg"></i>
-            </button>
-            <button id="reloadButton" onclick="reloadIframe()">
-                <i class="fa fa-refresh fa-lg"></i>
-            </button>
-        </div>
+        <div class="container">
+            <h2 id="game-name"></h2>
+            <div class="buttons-container">
+                <button onclick="goHome()">
+                    <i class='fa fa-house fa-lg'></i>
+                </button>
+                <button id="fullscreenButton" onclick="makeFullscreen()">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center fa-lg"></i>
+                </button>
+                <button id="reloadButton" onclick="reloadIframe()">
+                    <i class="fa fa-refresh fa-lg"></i>
+                </button>
+            </div>
         </div>
     </div>
     </center>
@@ -42,11 +46,24 @@
         const gameName = sessionStorage.getItem('gameName');
         if (gameLink && gameName) {
             document.getElementById('game-name').innerText = gameName; // Set the game name
-            redirectIframe(gameLink, 4750);
+            // Store gameLink to be used in startGame
+            sessionStorage.setItem('gameLink', gameLink);
         } else {
             window.location.href = "/games";
         }
     });
+
+    function startGame() {
+        // Hide the play button
+        document.getElementById('playButton').style.display = 'none';
+
+        const gameLink = sessionStorage.getItem('gameLink');
+        const iframe = document.getElementById('myIframe');
+
+        // Show the iframe and load the game
+        iframe.style.display = 'block';
+        redirectIframe(gameLink, 4750);
+    }
 
     function reloadIframe() {
         const iframe = document.getElementById('myIframe');
