@@ -134,14 +134,18 @@
     let isPaused = false;
     function togglePause() {
         const iframe = document.getElementById('myIframe');
+        
         if (isPaused) {
-            iframe.contentWindow.postMessage('resume', '*'); // Resume the game if it's paused
-            document.getElementById('pauseButton').innerText = 'Pause'; // Change button text
+            // Send "resume" message to the iframe to resume the game
+            iframe.contentWindow.postMessage('resume', '*');
+            document.getElementById('pauseButton').innerText = 'Pause'; // Change button text to 'Pause'
         } else {
-            iframe.contentWindow.postMessage('pause', '*'); // Pause the game
-            document.getElementById('pauseButton').innerText = 'Resume'; // Change button text
+            // Send "pause" message to the iframe to pause the game
+            iframe.contentWindow.postMessage('pause', '*');
+            document.getElementById('pauseButton').innerText = 'Resume'; // Change button text to 'Resume'
         }
-        isPaused = !isPaused;
+        
+        isPaused = !isPaused;  // Toggle the pause state
     }
 
     // Listen for when exiting fullscreen to remove the class
