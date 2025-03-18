@@ -83,3 +83,50 @@ body {
     padding-top: 0px;
     font-family: Bebas Neue;
 }
+/* Container for iframe */
+#iframe-container {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Adjust as needed */
+    background-color: #333; /* Background color */
+}
+
+/* Style for "Waffles" text */
+.game-title {
+    position: absolute;
+    top: 37%; /* Adjust position above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Subtle shadow */
+    font-weight: bold;
+}
+
+/* Style for Play button */
+#playButton {
+    position: absolute;
+    top: 55%; /* Below the "Waffles" text */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #4287f5; /* Blue */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Hover effect for Play button */
+#playButton:hover {
+    background-color: #356ad4; /* Darker blue */
+}
+
+/* Initially hidden iframe */
+#myIframe {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
