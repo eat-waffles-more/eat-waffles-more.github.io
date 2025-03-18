@@ -130,3 +130,22 @@ body {
     width: 100%;
     height: 100%;
 }
+/* Pause button overlaying in the top-right corner */
+#pauseButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+/* Hover effect for the pause button */
+#pauseButton:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
