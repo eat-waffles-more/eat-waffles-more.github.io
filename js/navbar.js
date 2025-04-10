@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="/forms"><i class="fa fa-clipboard-list fa-lg"></i></a>
         <a href="/reviews"><i class="fa fa-star fa-lg"></i></a>
         <a href="/contact" class="margin"><i class="fa fa-user fa-lg"></i></a>
-        <a href="/plus"><i class="fa-solid fa-user-plus"></i></a>
       </div>
       </div>
       <!-- Right section: Profile information -->
