@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'Helix Jump', image: '/images/helixjump.png', link: 'https://www.hoodamath.com/mobile/games/helix-jump/game.html?nocheckorient=1', path: '/play', favorite: false },
         { name: 'Are you Human?', image: '/images/areyouhuman.png', link: 'https://www.hoodamath.com/mobile/games/are-you-human/game.html?nocheckorient=1', path: '/play', favorite: false },
         { name: 'Ball Blast', image: '/images/ballblast.png', link: 'https://scratch.mit.edu/projects/472077983/embed', path: '/play', favorite: false },
-        { name: 'Simon', image: '/images/simongame.png', link: 'https://scratch.mit.edu/projects/313414192/embed', path: '/play', favorite: false },
+        { name: 'Simon', image: '/images/simongame.png', link: '/games/simon', path: '/play', favorite: false },
     ];
 
     const buttonContainer = document.getElementById('buttonContainer');
