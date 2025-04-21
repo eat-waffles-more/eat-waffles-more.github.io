@@ -37,7 +37,7 @@ body {
     height: 80%;
     border: 4px solid pink;
     border-radius: 10px;
-    background-color: #D2B48C;
+    background-color: lightblue;
 }
 
 #game-container iframe {
@@ -111,8 +111,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px 20px;
-    font-size: 1.2rem;
-    background-color: #4287f5; /* Blue */
+    font-size: 2rem;
+    background-color: #pink; /* Pink */
     color: white;
     border: none;
     cursor: pointer;
