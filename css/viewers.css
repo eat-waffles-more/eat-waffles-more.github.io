@@ -94,10 +94,10 @@ body {
 /* Style for "Waffles" text */
 .game-title {
     position: absolute;
-    top: 37%; /* Adjust position above the button */
+    top: 33%; /* Adjust position above the button */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: 'Arial', sans-serif;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Subtle shadow */
