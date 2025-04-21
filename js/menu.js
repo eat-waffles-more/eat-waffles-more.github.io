@@ -139,6 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         } else if (sortBy === 'alphabetical') {
             sortedButtons = buttons.sort((a, b) => a.name.localeCompare(b.name));
+            observeButtons();
         }
 
         // Filter buttons based on search input
@@ -168,4 +169,21 @@ document.addEventListener('DOMContentLoaded', function () {
     sortOptions.appendChild(starredOption);
 
     renderButtons(); // Initial rendering
+    // Intersection Observer to fade in buttons when fully visible
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, {
+    threshold: 1.0 // fully in view
+});
+
+// Observe all current and future buttons
+function observeButtons() {
+    const buttons = document.querySelectorAll('.menu-button');
+    buttons.forEach(button => observer.observe(button));
+}
+
 });
