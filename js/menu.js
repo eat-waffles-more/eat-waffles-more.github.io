@@ -130,7 +130,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 const favoriteA = getFavoriteStatus(a.name);
                 const favoriteB = getFavoriteStatus(b.name);
                 return favoriteB - favoriteA; // Show favorites first
-                observeButtons();
             });
         } else if (sortBy === 'clickCount') {
             sortedButtons = buttons.sort((a, b) => {
@@ -169,21 +168,5 @@ document.addEventListener('DOMContentLoaded', function () {
     sortOptions.appendChild(starredOption);
 
     renderButtons(); // Initial rendering
-    // Intersection Observer to fade in buttons when fully visible
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, {
-    threshold: 1.0 // fully in view
-});
-
-// Observe all current and future buttons
-function observeButtons() {
-    const buttons = document.querySelectorAll('.menu-button');
-    buttons.forEach(button => observer.observe(button));
-}
 
 });
