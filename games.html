@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,17 +28,11 @@
     <div id="navbar-container"></div>
     <center>
         <br><br>
-        <div id="sideMenu" class="side-menu">
-    <button class="close-btn" onclick="toggleMenu()">×</button>
-    <h2>Game Options</h2>
-    <input type="text" id="sideSearch" placeholder="Search for games...">
-    <select id="sideSortOptions">
-        <option value="alphabetical">Sort Alphabetically</option>
-        <option value="clickCount">Sort by Usage</option>
-    </select>
-</div>
-<button class="menu-toggle" onclick="toggleMenu()">☰ Options</button>
-
+        <input autocomplete="false" name="hidden" type="text" class="search" id="search" placeholder="Search for games...">
+        <select id="sortOptions">
+            <option value="alphabetical">Sort Alphabetically</option>
+            <option value="clickCount">Sort by Usage</option>
+        </select>
         <br><br>
         <div id="counterDisplay"></div>
         <br>
