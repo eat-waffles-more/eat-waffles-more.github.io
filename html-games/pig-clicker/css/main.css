@@ -1,0 +1,66 @@
+body {
+    background: linear-gradient(to right, purple, orange); /* Gradient from purple to orange */
+    font-family: Arial, sans-serif; /* Added sans-serif as a fallback font */
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+#button-container {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    margin-top: 75px;
+    margin-bottom: 200px;
+}
+
+#button-container #pig {
+    width: 200px;
+    height: 200px;
+    transition: transform .4s;
+}
+
+#button-container #pig:hover {
+    transform: scale(1.2);
+}
+
+#button-container .item {
+    transition: transform .4s;
+    border: 5px solid #000;
+    border-radius: 60px;
+}
+
+#button-container .item:hover {
+    transform: scale(1.1);
+}
+
+#button-container #reset {
+    transition: background-color .4s;
+    padding: 10px 20px; /* Combined padding */
+    border: 3px solid darkblue;
+    background-color: blue;
+    border-radius: 5px;
+    color: black;
+    font-size: 1.5rem;
+}
+
+#button-container #reset:hover {
+    background-color: darkblue;
+    color: white; /* Ensure text color changes on hover */
+}
+
+/* CSS for the animation */
+@keyframes shake {
+    transform: scale(1.1);
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.5s ease;
+    transform: scale(1.1); /* Ensure scale remains the same during shake */
+}
