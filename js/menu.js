@@ -130,6 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const favoriteA = getFavoriteStatus(a.name);
                 const favoriteB = getFavoriteStatus(b.name);
                 return favoriteB - favoriteA; // Show favorites first
+                observeButtons();
             });
         } else if (sortBy === 'clickCount') {
             sortedButtons = buttons.sort((a, b) => {
@@ -139,7 +140,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         } else if (sortBy === 'alphabetical') {
             sortedButtons = buttons.sort((a, b) => a.name.localeCompare(b.name));
-            observeButtons();
         }
 
         // Filter buttons based on search input
