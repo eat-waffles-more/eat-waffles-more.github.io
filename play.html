@@ -46,6 +46,7 @@
         window.addEventListener('load', function() {
         const gameLink = sessionStorage.getItem('gameLink');
         const gameName = sessionStorage.getItem('gameName');
+        const gameImage = sessionStorage.getItem('gameImage');
         document.getElementById('gameTitle').textContent = 'Play ' + gameName + ' on Waffles?';
         if (gameLink && gameName) {
             document.getElementById('game-name').innerText = gameName; // Set the game name
