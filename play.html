@@ -112,12 +112,19 @@
     }
 
     function redirectIframe(newSrc, delay) {
-        const iframe = document.getElementById('myIframe');
-        iframe.src = "/loading.html";
-        setTimeout(() => {
-            iframe.src = newSrc;
-        }, delay);
+    const iframe = document.getElementById('myIframe');
+    iframe.src = "/loading.html";
+
+    // Normalize the path to ensure it works in iframe
+    let finalSrc = newSrc;
+    if (!newSrc.startsWith('http') && !newSrc.startsWith('/')) {
+        finalSrc = '/' + newSrc;
     }
+
+    setTimeout(() => {
+        iframe.src = finalSrc;
+    }, delay);
+}
 
     document.addEventListener('fullscreenchange', function() {
         if (!document.fullscreenElement) {
