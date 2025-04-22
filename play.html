@@ -15,7 +15,7 @@
         <div id="iframe-container">
 
             <!-- Play Menu Image -->
-            <img src="" class="playImage">
+            <img src="" id="playImage">
             
             <!-- Text above the button -->
             <div class="game-title" id="gameTitle"></div>
@@ -52,6 +52,7 @@
         const gameName = sessionStorage.getItem('gameName');
         const gameImage = sessionStorage.getItem('gameImage');
         document.getElementById('gameTitle').textContent = 'Play ' + gameName + ' on Waffles?';
+        document.getElementById('playImage').src = gameImage;
         if (gameLink && gameName) {
             document.getElementById('game-name').innerText = gameName; // Set the game name
             sessionStorage.setItem('gameLink', gameLink);
