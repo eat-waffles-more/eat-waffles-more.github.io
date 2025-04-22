@@ -125,5 +125,5 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(() => {
             body.removeChild(loader);
         }, 500);
-    }, 2000);
+    }, 1000);
 });
