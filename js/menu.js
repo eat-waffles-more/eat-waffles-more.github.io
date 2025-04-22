@@ -34,7 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'Drive Mad', image: '/images/drivemad.png', link: '/gameCode/drive-mad', path: '/play', favorite: false },
         { name: 'Stickman Hook', image: '/images/stickmanhook.png', link: '/gameCode/stick-man-hook', path: '/play', favorite: false },
         { name: 'Cookie Clicker', image: '/images/cookieclicker.png', link: '/gameCode/cookie-clicker', path: '/play', favorite: false },
-        { name: 'Stickman Hook', image: '/images/escaperoads.png', link: '/gameCode/escape-roads', path: '/play', favorite: false },
+        { name: 'Escape Roads', image: '/images/escaperoads.png', link: '/gameCode/escape-roads', path: '/play', favorite: false },
+        { name: 'Stick Archer Battle', image: '/images/stickarcherbattle.png', link: '/gameCode/stick-archer-battle', path: '/play', favorite: false },
     ];
 
     const buttonContainer = document.getElementById('buttonContainer');
