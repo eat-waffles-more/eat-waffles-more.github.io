@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'Ball Blast', image: '/images/ballblast.png', link: 'https://scratch.mit.edu/projects/472077983/embed', path: '/play', favorite: false },
         { name: 'Simon', image: '/images/simongame.png', link: 'https://scratch.mit.edu/projects/20016532/embed', path: '/play', favorite: false },
         { name: 'Speed Cube', image: '/images/speedcube.png', link: 'https://www.hoodamath.com/mobile/games/speed-cube/game.html?nocheckorient=1', path: '/play', favorite: false },
-        { name: 'Drive Mad', image: '/images/drivemed.png', link: '/gameCode/drive-mad/', path: '/play', favorite: false },
+        { name: 'Drive Mad', image: '/images/drivemed.png', link: '/gameCode/drive-mad.html/', path: '/play', favorite: false },
     ];
 
     const buttonContainer = document.getElementById('buttonContainer');
