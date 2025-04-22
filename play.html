@@ -42,6 +42,7 @@
     </center>
 
     <script>
+        document.title = 'Waffles | Play';
         window.addEventListener('load', function() {
         const gameLink = sessionStorage.getItem('gameLink');
         const gameName = sessionStorage.getItem('gameName');
@@ -147,7 +148,6 @@
             document.getElementById('iframe-container').classList.remove('fullscreen');
         }
     });
-    document.title = 'Waffles | ' + gameName;
     </script>
 
     <div id="particles-js"></div>
