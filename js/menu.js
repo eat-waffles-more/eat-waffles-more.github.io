@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'Car Rush', image: '/images/carrush.png', link: 'https://www.hoodamath.com/mobile/games/car-rush/game.html?nocheckorient=1', path: '/play', favorite: false },
         { name: 'Opposite Day', image: '/images/oppositeday.png', link: 'https://www.hoodamath.com/mobile/games/opposite-day/game.html?nocheckorient=1', path: '/play', favorite: false },
         { name: 'Wordle', image: '/images/wordle.png', link: 'https://wordleunlimited.org/#google_vignette', path: '/play', favorite: false },
-        { name: 'Helix Jump', image: '/images/helixjump.png', link: 'https://www.hoodamath.com/mobile/games/helix-jump/game.html?nocheckorient=1', path: '/play', favorite: false },
+        { name: 'Helix Jump', image: '/images/helixjump.png', link: '/gameCode/helix-jump', path: '/play', favorite: false },
         { name: 'Are you Human?', image: '/images/areyouhuman.png', link: 'https://www.hoodamath.com/mobile/games/are-you-human/game.html?nocheckorient=1', path: '/play', favorite: false },
         { name: 'Ball Blast', image: '/images/ballblast.png', link: 'https://scratch.mit.edu/projects/472077983/embed', path: '/play', favorite: false },
         { name: 'Simon', image: '/images/simongame.png', link: 'https://scratch.mit.edu/projects/20016532/embed', path: '/play', favorite: false },
