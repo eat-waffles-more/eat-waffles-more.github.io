@@ -33,6 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'Speed Cube', image: '/images/speedcube.png', link: 'https://www.hoodamath.com/mobile/games/speed-cube/game.html?nocheckorient=1', path: '/play', favorite: false },
         { name: 'Drive Mad', image: '/images/drivemad.png', link: '/gameCode/drive-mad', path: '/play', favorite: false },
         { name: 'Stickman Hook', image: '/images/stickmanhook.png', link: '/gameCode/stick-man-hook', path: '/play', favorite: false },
+        { name: 'Cookie Clicker', image: '/images/cookieclicker.png', link: '/gameCode/cookie-clicker', path: '/play', favorite: false },
+        { name: 'Stickman Hook', image: '/images/escaperoads.png', link: '/gameCode/escape-roads', path: '/play', favorite: false },
     ];
 
     const buttonContainer = document.getElementById('buttonContainer');
