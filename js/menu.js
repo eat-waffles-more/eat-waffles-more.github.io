@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setClickCount(button.name, count);
     sessionStorage.setItem('gameLink', button.link);
     sessionStorage.setItem('gameName', button.name);
+    sessionStorage.setItem('gameImage', button.image);
 
     // Update iframe on the current page instead of navigating to viewer.html
     const iframe = document.getElementById('myIframe');
