@@ -1,1 +1,1 @@
-WAFFLES AS A GAME SITE.
+Waffles!
