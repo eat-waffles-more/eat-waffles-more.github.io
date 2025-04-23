@@ -16,10 +16,8 @@
 
             
             <!-- Text above the button -->
-            <div class="game-title" id="gameTitle">Waffles</div>
             
-            <!-- Play Button -->
-            <button id="playButton" onclick="startGame()"><i class="fa-solid fa-circle-play"></i></button>
+            <
 
             <!-- Initially hidden iframe -->
             <iframe id="myIframe" src="" frameborder="none"></iframe>
@@ -49,13 +47,13 @@
         window.addEventListener('load', function () {
     const gameLink = sessionStorage.getItem('gameLink');
     const gameName = sessionStorage.getItem('gameName');
-    document.getElementById('game-name').innerText = gameName;
+    document.getElementById('game-name').textContent = gameName;
     // Redirect if either is null or an empty string
     if (!gameLink || !gameName) {
         window.location.href = "/games";
         return;
     }
-
+    startGame()
 });
 
     });
