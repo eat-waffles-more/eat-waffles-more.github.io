@@ -17,39 +17,21 @@
              <div class="game-title" id="gameTitle">Waffles</div>
  
              <!-- Play Button -->
-             <button id="playButton" onclick="startGame()"><i class="fa-solid fa-circle-play"></i></button>
+             <button id="playButton" onclick="startGame()">Play</button>
  
              <!-- Initially hidden iframe -->
              <iframe id="myIframe" src="" frameborder="none"></iframe>
+ 
+             <!-- Pause Button (Top-Right Corner) -->
+             <button id="pauseButton" onclick="togglePause()">Pause</button>
          </div>
  
          <!-- Game name and buttons moved below iframe -->
-         <div class="container">
-             <h2 id="game-name"></h2>
-             <div class="buttons-container">
-                 <button onclick="goHome()">
-                     <i class='fa fa-house fa-lg'></i>
-                 </button>
-                 <button id="fullscreenButton" onclick="makeFullscreen()">
-                     <i class="fa-solid fa-up-right-and-down-left-from-center fa-lg"></i>
-                 </button>
-                 <button id="reloadButton" onclick="reloadIframe()">
-                     <i class="fa fa-refresh fa-lg"></i>
-                 </button>
-             </div>
-         </div>
-     </div>
-     </center>
- 
-     <script>
-     document.title = 'Waffles | Play';
- 
-     window.addEventListener('load', function() {
-         const gameLink = sessionStorage.getItem('gameLink');
-         const gameName = sessionStorage.getItem('gameName');
-         document.getElementById('gameTitle').textContent = 'Play ' + gameName + ' on Waffles?';
+<script>
+         document.getElementById('gameTitle').textContent = gameName;
          if (gameLink && gameName) {
              document.getElementById('game-name').innerText = gameName; // Set the game name
+             // Store gameLink to be used in startGame
              sessionStorage.setItem('gameLink', gameLink);
          } else {
              window.location.href = "/games";
@@ -57,80 +39,73 @@
      });
  
      function startGame() {
+         // Hide the play button and the "Waffles" text
          document.getElementById('playButton').style.display = 'none';
+         document.getElementById('gameTitle').style.display = 'none';  // Hide "Waffles" text
          document.getElementById('gameTitle').style.display = 'none';
  
          const gameLink = sessionStorage.getItem('gameLink');
          const iframe = document.getElementById('myIframe');
  
+         // Show the iframe and load the game
          iframe.style.display = 'block';
          redirectIframe(gameLink, 4750);
      }
- 
-     function reloadIframe() {
-         const iframe = document.getElementById('myIframe');
+ @@ -78,15 +72,12 @@
          const currentSrc = iframe.src;
          const reloadButton = document.getElementById('reloadButton');
  
+         // Ensure the button has the icon
          reloadButton.innerHTML = "<i class='fa fa-refresh fa-lg'></i>";
  
+         // Reload the iframe
          iframe.src = '';
          iframe.src = currentSrc;
      }
  
+     // Add hover effect for spinning
      document.addEventListener("DOMContentLoaded", function () {
          const reloadButton = document.getElementById('reloadButton');
  
-         reloadButton.addEventListener("mouseenter", function () {
-             reloadButton.querySelector("i").classList.add("fa-spin");
-         });
- 
-         reloadButton.addEventListener("mouseleave", function () {
-             reloadButton.querySelector("i").classList.remove("fa-spin");
-         });
-     });
- 
-     function makeFullscreen() {
+ @@ -103,7 +94,6 @@
          const iframe = document.getElementById('myIframe');
          const iframeContainer = document.getElementById('iframe-container');
  
+         // Request fullscreen on the iframe
          if (iframe.requestFullscreen) {
              iframe.requestFullscreen();
          } else if (iframe.mozRequestFullScreen) {
-             iframe.mozRequestFullScreen();
-         } else if (iframe.webkitRequestFullscreen) {
-             iframe.webkitRequestFullscreen();
-         } else if (iframe.msRequestFullscreen) {
+ @@ -114,7 +104,6 @@
              iframe.msRequestFullscreen();
          }
  
+         // Add a class to keep the navbar visible during fullscreen
          iframeContainer.classList.add('fullscreen');
      }
  
-     function goHome() {
-         window.location.href = '/games';
-     }
- 
-     function redirectIframe(newSrc, delay) {
-         const iframe = document.getElementById('myIframe');
-         iframe.src = "/loading.html";
-         setTimeout(() => {
-             iframe.src = newSrc;
+ @@ -130,53 +119,34 @@
          }, delay);
-     const iframe = document.getElementById('myIframe');
-     iframe.src = "/loading.html";
- 
-     // Normalize the path to ensure it works in iframe
-     let finalSrc = newSrc;
-     if (!newSrc.startsWith('http') && !newSrc.startsWith('/')) {
-         finalSrc = '/' + newSrc;
      }
  
-     setTimeout(() => {
-         iframe.src = finalSrc;
-     }, delay);
- }
+     // Pause and Unpause the game in iframe
+     let isPaused = false;
+     function togglePause() {
+         const iframe = document.getElementById('myIframe');
+         
+         if (isPaused) {
+             // Send "resume" message to the iframe to resume the game
+             iframe.contentWindow.postMessage('resume', '*');
+             document.getElementById('pauseButton').innerText = 'Pause'; // Change button text to 'Pause'
+         } else {
+             // Send "pause" message to the iframe to pause the game
+             iframe.contentWindow.postMessage('pause', '*');
+             document.getElementById('pauseButton').innerText = 'Resume'; // Change button text to 'Resume'
+         }
+         
+         isPaused = !isPaused;  // Toggle the pause state
+     }
  
+     // Listen for when exiting fullscreen to remove the class
      document.addEventListener('fullscreenchange', function() {
          if (!document.fullscreenElement) {
              document.getElementById('iframe-container').classList.remove('fullscreen');
