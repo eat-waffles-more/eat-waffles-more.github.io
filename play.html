@@ -51,7 +51,7 @@
          document.getElementById('gameTitle').textContent = 'Play ' + gameName + ' on Waffles?';
          document.getElementById('playImage').src = gameImage;
          if (gameLink && gameName) {
-             document.getElementById('game-name').innerText = gameName; // Set the game name
+             document.getElementById('game-name').textContent = gameName; // Set the game name
              sessionStorage.setItem('gameLink', gameLink);
          } else {
              window.location.href = "/games";
