@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'Arena King', image: '/images/arenaking.png', link: '/gameCode/arena-king', path: '/play', favorite: false },
         { name: 'Gun Spin', image: '/images/gunspin.png', link: '/gameCode/gun-spin', path: '/play', favorite: false },
         { name: 'Stickman Parkour', image: '/images/stickmanparkour.png', link: '/gameCode/stickman-parkour', path: '/play', favorite: false },
+        { name: 'Recoil', image: '/images/recoil.png', link: '/gameCode/recoil', path: '/play', favorite: false },
     ];
 
     const buttonContainer = document.getElementById('buttonContainer');
