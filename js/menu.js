@@ -36,6 +36,9 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'Cookie Clicker', image: '/images/cookieclicker.png', link: '/gameCode/cookie-clicker', path: '/play', favorite: false },
         { name: 'Escape Roads', image: '/images/escaperoads.png', link: '/gameCode/escape-roads', path: '/play', favorite: false },
         { name: 'Stick Archer Battle', image: '/images/stickarcherbattle.png', link: '/gameCode/stick-archer-battle', path: '/play', favorite: false },
+        { name: 'Arena King', image: '/images/arenaking.png', link: '/gameCode/arena-king', path: '/play', favorite: false },
+        { name: 'Gun Spin', image: '/images/gunspin.png', link: '/gameCode/gun-spin', path: '/play', favorite: false },
+        { name: 'Stickman Parkour', image: '/images/stickmanparkour.png', link: '/gameCode/stickman-parkour', path: '/play', favorite: false },
     ];
 
     const buttonContainer = document.getElementById('buttonContainer');
