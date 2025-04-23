@@ -42,7 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'Recoil', image: '/images/recoil.png', link: '/gameCode/recoil', path: '/play', favorite: false },
         { name: 'Google Snake', image: '/images/snake.png', link: '/gameCode/snake', path: '/play', favorite: false },
         { name: 'Moto X3m', image: '/images/motox3m.png', link: '/gameCode/moto-x3m', path: '/play', favorite: false },
-        { name: 'Bacon May Dir', image: '/images/baconmaydie.png', link: '/gameCode/bacon-may-die', path: '/play', favorite: false },
+        { name: 'Bacon May Die', image: '/images/baconmaydie.png', link: '/gameCode/bacon-may-die', path: '/play', favorite: false },
+        { name: 'Eaglercraft', image: '/images/eaglercraft.png', link: '/gameCode/eaglercraft', path: '/play', favorite: false },
     ];
 
     const buttonContainer = document.getElementById('buttonContainer');
