@@ -39,6 +39,20 @@
     </center>
 
     <script>
+        window.addEventListener('load', function() {
+    const gameLink = sessionStorage.getItem('gameLink');
+    const gameName = sessionStorage.getItem('gameName');
+    
+    document.getElementById('game-name').textContent = gameName;
+    // Redirect if either is null or an empty string
+    if (!gameLink || !gameName) {
+        window.location.href = "/games";
+        return;
+    }
+
+    startGame();
+});
+
         startGame()
         document.title = 'Waffles | Play';
         window.addEventListener('load', function() {
