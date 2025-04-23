@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'Stickman Parkour', image: '/images/stickmanparkour.png', link: '/gameCode/stickman-parkour', path: '/play', favorite: false },
         { name: 'Recoil', image: '/images/recoil.png', link: '/gameCode/recoil', path: '/play', favorite: false },
         { name: 'Google Snake', image: '/images/snake.png', link: '/gameCode/snake', path: '/play', favorite: false },
+        { name: 'Moto X3m', image: '/images/motox3m.png', link: '/gameCode/moto-x3m', path: '/play', favorite: false },
     ];
 
     const buttonContainer = document.getElementById('buttonContainer');
