@@ -44,6 +44,9 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'Moto X3m', image: '/images/motox3m.png', link: '/gameCode/moto-x3m', path: '/play', favorite: false },
         { name: 'Bacon May Die', image: '/images/baconmaydie.png', link: '/gameCode/bacon-may-die', path: '/play', favorite: false },
         { name: 'Eaglercraft', image: '/images/eaglercraft.png', link: '/gameCode/eaglercraft', path: '/play', favorite: false },
+        { name: 'Asteroids', image: '/images/asteroids.png', link: '/gameCode/asteroids', path: '/play', favorite: false },
+        { name: 'Slither.IO', image: '/images/slitherio.png', link: '/gameCode/slither-io', path: '/play', favorite: false },
+        { name: 'Flappy Bird', image: '/images/flappybird.png', link: '/gameCode/flappy-bird', path: '/play', favorite: false },
     ];
 
     const buttonContainer = document.getElementById('buttonContainer');
