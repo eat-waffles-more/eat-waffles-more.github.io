@@ -47,6 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'Asteroids', image: '/images/asteroids.png', link: '/gameCode/asteroids', path: '/play', favorite: false },
         { name: 'Slither.IO', image: '/images/slitherio.png', link: '/gameCode/slither-io', path: '/play', favorite: false },
         { name: 'Flappy Bird', image: '/images/flappybird.png', link: '/gameCode/flappy-bird', path: '/play', favorite: false },
+        { name: 'Slow Roads', image: '/images/slowroads.png', link: '/gameCode/slow-roads', path: '/play', favorite: false },
+        { name: 'Cleanup.IO', image: '/images/cleanupio.png', link: '/gameCode/cleanup-io', path: '/play', favorite: false },
     ];
 
     const buttonContainer = document.getElementById('buttonContainer');
