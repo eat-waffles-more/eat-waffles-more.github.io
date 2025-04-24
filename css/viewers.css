@@ -82,6 +82,7 @@ body {
     font-size: 40px;
     padding-top: 0px;
     font-family: Bebas Neue;
+    text-wrap: nowrap;
 }
 /* Container for iframe */
 #iframe-container {
