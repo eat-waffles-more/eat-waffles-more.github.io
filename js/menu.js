@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'Flappy Bird', image: '/images/flappybird.png', link: '/gameCode/flappy-bird', path: '/play', favorite: false },
         { name: 'Slow Roads', image: '/images/slowroads.png', link: '/gameCode/slow-roads', path: '/play', favorite: false },
         { name: 'Cleanup.IO', image: '/images/cleanupio.png', link: '/gameCode/cleanup-io', path: '/play', favorite: false },
+        { name: 'Tomb of The Mask', image: '/images/tombofthemask.png', link: '/gameCode/tomb-of-the-mask', path: '/play', favorite: false },
     ];
 
     const buttonContainer = document.getElementById('buttonContainer');
