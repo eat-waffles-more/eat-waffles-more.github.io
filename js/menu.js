@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'Slow Roads', image: '/images/slowroads.png', link: '/gameCode/slow-roads', path: '/play', favorite: false },
         { name: 'Cleanup.IO', image: '/images/cleanupio.png', link: '/gameCode/cleanup-io', path: '/play', favorite: false },
         { name: 'Tomb of The Mask', image: '/images/tombofthemask.png', link: '/gameCode/tomb-of-the-mask', path: '/play', favorite: false },
+        { name: 'Subway Surfers', image: '/images/subwaysurfers.png', link: '/gameCodes/play/subwaysurferssanfrancisco', path: '/play', favorite: false },
     ];
 
     const buttonContainer = document.getElementById('buttonContainer');
