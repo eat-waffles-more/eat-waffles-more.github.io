@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'Speed Cube', image: '/images/speedcube.png', link: 'https://www.hoodamath.com/mobile/games/speed-cube/game.html?nocheckorient=1', path: '/play', favorite: false },
         { name: 'Drive Mad', image: '/images/drivemad.png', link: '/gameCode/drive-mad', path: '/play', favorite: false },
         { name: 'Stickman Hook', image: '/images/stickmanhook.png', link: '/gameCode/stick-man-hook', path: '/play', favorite: false },
-        { name: 'Cookie Clicker', image: '/images/cookieclicker.png', link: 'gameCodes/play/cookie', path: '/play', favorite: false },
+        { name: 'Cookie Clicker', image: '/images/cookieclicker.png', link: 'gameCode/cookie-clicker', path: '/play', favorite: false },
         { name: 'Escape Roads', image: '/images/escaperoads.png', link: '/gameCode/escape-roads', path: '/play', favorite: false },
         { name: 'Stick Archer Battle', image: '/images/stickarcherbattle.png', link: '/gameCode/stick-archer-battle', path: '/play', favorite: false },
         { name: 'Arena King', image: '/images/arenaking.png', link: '/gameCode/arena-king', path: '/play', favorite: false },
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'Slow Roads', image: '/images/slowroads.png', link: '/gameCode/slow-roads', path: '/play', favorite: false },
         { name: 'Cleanup.IO', image: '/images/cleanupio.png', link: '/gameCode/cleanup-io', path: '/play', favorite: false },
         { name: 'Tomb of The Mask', image: '/images/tombofthemask.png', link: '/gameCode/tomb-of-the-mask', path: '/play', favorite: false },
-        { name: 'Subway Surfers', image: '/images/subwaysurfers.png', link: '/gameCodes/play/subwaysurferssanfrancisco', path: '/play', favorite: false },
+        { name: 'Subway Surfers', image: '/images/subwaysurfers.png', link: 'https://freeonlinegames.github.io/subway-surfers-tokyo/', path: '/play', favorite: false },
     ];
 
     const buttonContainer = document.getElementById('buttonContainer');
