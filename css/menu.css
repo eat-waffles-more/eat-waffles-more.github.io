@@ -35,9 +35,11 @@ search {
     width: 100%;
     height: 100%;
     transition: transform 0.5s ease;
+    border-radius: 15%;
 }
 
 .menu-button:hover img {
+    border-radius: 15%;
     transform: scale(1.3);
 }
 
