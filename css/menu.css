@@ -1,28 +1,6 @@
-.search {
-    background-color: #87CEEB;
-    border: 3px solid #fff;
-    border-radius: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 500;
-    font-family: Space Grotesk;
-    color: #fff;
-    width: 30%;
-    outline: none;
-}
-
-.button-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-left: 50px;
-    margin-right: 60px;
-}
-
 .menu-button {
     position: relative;
+    display: inline-block;
     margin: 10px;
     width: 140px;
     height: 140px;
@@ -32,11 +10,11 @@
     text-align: center;
     color: lightblue;
     text-decoration: none;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease;  /* Keep this for smooth transformation */
 }
 
 .menu-button:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) rotate(25deg); /* Scale up and tilt by 25 degrees */
 }
 
 .menu-button img {
@@ -71,6 +49,7 @@
     backdrop-filter: blur(3px);
     color: pink;
 }
+
 #counterDisplay {
     color: lightblue;
     font-size: 20px;
@@ -78,12 +57,6 @@
 
 #counterDisplay:hover {
     cursor: default;
-}
-
-.menu-button {
-    position: relative;
-    display: inline-block;
-    margin: 10px;
 }
 
 button {
@@ -110,6 +83,7 @@ button {
 #sortOptions:hover {
     background-color: lightblue;
 }
+
 #sortOptions option {
     padding: 9px;
     font-size: 16px;
