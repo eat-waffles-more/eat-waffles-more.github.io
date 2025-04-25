@@ -11,6 +11,14 @@
     width: 30%;
     outline: none;
 }
+.button-container {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     margin-left: 50px;
+     margin-right: 60px;
+}
 .menu-button {
     position: relative;
     display: inline-block;
