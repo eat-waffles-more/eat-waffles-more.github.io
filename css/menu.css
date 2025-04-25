@@ -1,4 +1,4 @@
-search {
+.search {
     background-color: #87CEEB;
     border: 3px solid #fff;
     border-radius: 10px;
@@ -18,29 +18,29 @@ search {
     width: 140px;
     height: 140px;
     overflow: hidden;
-    border-radius: 15%;
+    border-radius: 15% !important;
     cursor: pointer;
     text-align: center;
     color: lightblue;
     text-decoration: none;
-    transition: transform 0.5s ease;  /* Keep this for smooth transformation */
+    transition: transform 0.5s ease;
 }
 
 .menu-button:hover {
-    transform: scale(1.1) rotate(5deg); /* Scale up and tilt by 25 degrees */
-    border-radius: 15%;
+    transform: scale(1.1) rotate(5deg);
+    border-radius: 15% !important;
 }
 
 .menu-button img {
     width: 100%;
     height: 100%;
     transition: transform 0.5s ease;
-    border-radius: 15%;
+    border-radius: 15% !important;
 }
 
 .menu-button:hover img {
-    border-radius: 15%;
     transform: scale(1.3);
+    border-radius: 15% !important;
 }
 
 .overlay {
@@ -50,7 +50,7 @@ search {
     right: 0;
     bottom: 0;
     background: rgba(34, 34, 34, 0.5);
-    border-radius: 15%;
+    border-radius: 15% !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,6 +59,7 @@ search {
     font-family: 'Space Grotesk', sans-serif;
     color: white;
 }
+
 
 .menu-button:hover .overlay {
     opacity: 1;
