@@ -16,7 +16,7 @@
 }
 .search:hover {
     background-color: #90d5ff;
-    transform: scale(0.9);
+    transform: scale(1.1);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
 }
 .button-container {
