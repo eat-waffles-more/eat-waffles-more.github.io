@@ -1,26 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-      const desc1 = document.getElementById('desc-1');
+  const elementsToObserve = ['desc-1', 'desc-2'];
 
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
-            observer.unobserve(entry.target); // Only run once
-          }
-        });
-      }, { threshold: 0.1 });
-
-      observer.observe(desc);
-      const desc2 = document.getElementById('desc-2');
-
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
-            observer.unobserve(entry.target); // Only run once
-          }
-        });
-      }, { threshold: 0.1 });
-
-      observer.observe(desc);
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+        obs.unobserve(entry.target); // Only run once per element
+      }
     });
+  }, { threshold: 0.1 });
+
+  elementsToObserve.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
+});
