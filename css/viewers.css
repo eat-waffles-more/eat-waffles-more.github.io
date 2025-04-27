@@ -66,6 +66,7 @@ body {
     background-color: rgba(210, 180, 140, 1);
     color: lightblue;
     transition: background-color 0.7s;
+    transition: box-shadow 0.7s;
     border: 3px solid lightblue;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* <-- Added shadow */
 }
@@ -75,7 +76,8 @@ body {
     background-color: lightblue;
     box-shadow: 0 7px 10px rgba(0, 0, 0, 0.15);
     color: rgba(210, 180, 140, 1);
-    transition: background-color, box-shadow 0.7s;
+    transition: background-color 0.7s;
+    transition: box-shadow 0.7s;
     border: none;
 }
 
@@ -85,7 +87,7 @@ body {
     padding-top: 0px;
     font-family: Bebas Neue;
     text-wrap: nowrap;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 /* Container for iframe */
 #iframe-container {
@@ -107,7 +109,7 @@ body {
     color: #fff;
     font-weight: bold;
     font-size: 2rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* <-- Added shadow */
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* <-- Added shadow */
 }
 
 /* Style for Play button */
