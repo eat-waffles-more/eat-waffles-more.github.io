@@ -1,3 +1,4 @@
+/* Navbar container */
 .navbar {
   position: fixed;
   top: 0;
@@ -14,6 +15,7 @@
   box-shadow: 0 0 10px rgba(173, 216, 230, 0.5); /* Light blue glow for shadow */
 }
 
+/* Left and right sections of navbar */
 .nav-left-bg, .nav-right-bg {
   background-color: rgba(173, 216, 230, 0.5); /* Light blue background with transparency */
   backdrop-filter: blur(6px);
@@ -25,16 +27,19 @@
   box-shadow: 0 0 10px rgba(255, 105, 180, 0.5); /* Pink glow effect */
 }
 
+/* Logo styling */
 .logo img {
   height: 65px;
   width: auto;
 }
 
+/* Navigation links section */
 .nav-links {
   display: flex;
   gap: 5px; /* Increased gap for better spacing */
 }
 
+/* Styling individual navigation links */
 .nav-links a {
   display: flex;
   align-items: center;
@@ -48,12 +53,14 @@
   box-shadow: 0 0 10px rgba(173, 216, 230, 0.6); /* Light blue shadow for icons */
 }
 
+/* Hover effect for navigation links */
 .nav-links a:hover {
   background-color: rgba(210, 180, 140, 1); /* Tan background on hover */
   box-shadow: 0 0 15px rgba(255, 105, 180, 0.8); /* Pink shadow on hover */
   transform: scale(1.1);
 }
 
+/* Icon styling inside navigation links */
 .nav-links a i {
   color: white;
   font-size: 1.5em;
@@ -61,14 +68,17 @@
   transition: transform 0.3s ease;
 }
 
+/* Hover effect for icons */
 .nav-links a:hover i {
   transform: scale(1.3);
 }
+
+/* Profile section */
 .user-profile {
   display: flex;
   align-items: center; /* Center align items vertically */
   gap: 10px; /* Space between avatar and username */
-  margin-right: 20px; /* Add extra margin to separate profile from icons *
+  margin-right: 20px; /* Add extra margin to separate profile from icons */
   text-decoration: none; /* Remove underline from all links */
 }
 
@@ -96,5 +106,68 @@
   text-decoration: none; /* Ensure no underline */
   display: inline-block; /* Make sure it behaves like text */
   line-height: 40px; /* Adjust line height to match avatar size */
-  text-decoration: none; /* Remove underline from all links */
+}
+
+/* Extra button styling */
+.extra {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 105, 180, 0.7); /* Same pink as nav links */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(173, 216, 230, 0.6); /* Light blue shadow */
+}
+
+.extra:hover {
+  background-color: rgba(210, 180, 140, 1); /* Tan background on hover */
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.8); /* Pink shadow on hover */
+  transform: scale(1.1);
+}
+
+/* Extra buttons container (hidden by default) */
+.extra-buttons {
+  display: none; /* Hidden initially */
+  position: absolute; /* Positioned relative to navbar */
+  top: 60px; /* Adjust based on navbar height */
+  right: 20px;
+  background-color: rgba(173, 216, 230, 0.8); /* Light blue background */
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(173, 216, 230, 0.6); /* Blue shadow */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.extra-buttons a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+  transition: transform 0.3s ease;
+}
+
+.extra-buttons a:hover {
+  transform: scale(1.1);
+}
+
+.extra-buttons a i {
+  text-shadow: 0 0 5px rgba(255, 105, 180, 0.8); /* Pink text shadow */
+}
+
+/* Optionally add some animations for the extra buttons */
+.extra-buttons.active {
+  display: flex;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.extra-buttons.hidden {
+  opacity: 0;
+  display: none;
 }
