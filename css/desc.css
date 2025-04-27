@@ -1,3 +1,6 @@
+body {
+    margin: 0;
+}
 #desc-1 {
     border-top: 5px solid #fff;
     border-bottom: 5px solid #fff;
