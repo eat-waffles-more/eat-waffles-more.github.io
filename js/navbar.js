@@ -43,12 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const extraButtons = document.querySelector('.extra-buttons');
 
   plusIcon.addEventListener('click', () => {
-    if (extraLinks.style.display === 'none') {
+    if (extraButtons.style.display === 'none') {
       extraButtons.style.display = 'flex';
-      plusIcon.innerHTML = '<i class="fa fa-minus fa-lg"></i>';
+      extraIcon.innerHTML = '<i class="fa fa-minus fa-lg"></i>';
     } else {
       extraButtons.style.display = 'none';
-      plusIcon.innerHTML = '<i class="fa fa-plus fa-lg"></i>';
+      extraIcon.innerHTML = '<i class="fa fa-plus fa-lg"></i>';
     }
   });
 });
