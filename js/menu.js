@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const popUp = document.createElement('div');
         popUp.className = 'popup';
-        popUp.innerText = `Clicked: ${count} clicks`;
+        popUp.innerText = Clicked: ${count} clicks;
         a.appendChild(popUp);
 
         // Font Awesome favorite icon
@@ -110,13 +110,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const icon = document.createElement('i');
         icon.className = button.favorite ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
         favoriteIcon.appendChild(icon);
-
         favoriteIcon.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevent the click event from bubbling up to the <a> element
+            e.stopPropagation();
             toggleFavorite(button);
             icon.className = button.favorite ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
         });
-
         a.appendChild(favoriteIcon);
 
         a.addEventListener('click', () => {
@@ -163,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
             buttonContainer.appendChild(createButton(button));
         });
 
-        counterDisplay.textContent = `${filteredButtons.length} Games Loaded`;
+        counterDisplay.textContent = ${filteredButtons.length} Games Loaded;
     }
 
     searchInput.addEventListener('input', (e) => {
