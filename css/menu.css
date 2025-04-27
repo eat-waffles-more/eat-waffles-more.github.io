@@ -32,13 +32,13 @@
     color: lightblue;
     text-decoration: none;
     transition: transform 0.7s ease, box-shadow 0.7s ease;  /* Keep this for smooth transformation */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .menu-button:hover {
     transform: scale(1.1);
     border-radius: 15%;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
 }
 
 .menu-button img {
@@ -104,10 +104,15 @@ button {
     cursor: pointer;
     border-radius: 5px;
     outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.7s, box-shadow 0.7s, transform 0.7s;
+    transform: scale(1);
 }
 
 #sortOptions:hover {
     background-color: lightblue;
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
 }
 
 #sortOptions option {
