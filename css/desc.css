@@ -3,7 +3,7 @@
   border-bottom: 5px solid #fff;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start; /* Align items to the top */
   padding: 0 20px;
 }
 
@@ -11,19 +11,25 @@
   font-size: 1.5rem;
   color: lightblue;
   font-family: Arial;
-  text-align: left;
   width: 50%;
+  text-align: left;
 }
 
 #desc-1 p {
   color: white;
   font-family: Arial;
   width: 50%;
-  text-align: center;
+  text-align: left;
+  margin-top: 10px; /* Add some space between the h1 and p */
 }
 
+#image-1-continer {
+  width: 50%; /* Adjust the width of the image */
+  display: block;
+  margin-left: 20px; /* Add space between the image and text */
+}
 #image-1 {
-  width: 200px;
-  display: flex;
-  justify-content: center;
+  width: 300px; /* Adjust the width of the image */
+  display: block;
+  margin-left: 20px; /* Add space between the image and text */
 }
