@@ -108,12 +108,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const favoriteIcon = document.createElement('span');
         favoriteIcon.className = 'favorite-icon';
         const icon = document.createElement('i');
-        icon.className = button.favorite ? 'fa-solid fa-star' : 'fa-regular fa-star';
+        icon.className = button.favorite ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
         favoriteIcon.appendChild(icon);
         favoriteIcon.addEventListener('click', (e) => {
             e.stopPropagation();
             toggleFavorite(button);
-            icon.className = button.favorite ? 'fa-solid fa-star' : 'fa-regular fa-star';
+            icon.className = button.favorite ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
         });
         a.appendChild(favoriteIcon);
 
