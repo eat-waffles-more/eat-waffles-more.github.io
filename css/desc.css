@@ -2,12 +2,14 @@
     border-top: 5px solid #fff;
     border-bottom: 5px solid #fff;
     display: flex;
-    flex-direction: column; /* Stack the h1 and p vertically */
     justify-content: space-between;
     align-items: flex-start;
     padding: 0 20px;
   }
-
+  #text-container {
+    display: flex;
+    flex-direction: column; /* Stack the h1 and p vertically */
+  }
   #desc-1 h1 {
     font-size: 1.5rem;
     color: lightblue;
