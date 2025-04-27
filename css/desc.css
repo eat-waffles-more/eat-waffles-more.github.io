@@ -5,6 +5,8 @@
     justify-content: space-between;
     padding: 0 20px;
     margin: 0;
+    background-color: rgba(0, 0, 0, 0.2); /* semi-transparent black background */
+    backdrop-filter: blur(10px); /* Apply the blur effect */
   }
 
   #text-container {
