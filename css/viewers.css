@@ -74,7 +74,7 @@ body {
 #game-container .buttons-container button:hover {
     padding: 10px 20px;
     background-color: lightblue;
-    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
     color: rgba(210, 180, 140, 1);
     transform: scale(0.9);
 }
