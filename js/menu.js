@@ -51,8 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'Cleanup.IO', image: '/images/cleanupio.png', link: '/gameCode/cleanup-io', path: '/play', favorite: false },
         { name: 'Tomb of The Mask', image: '/images/tombofthemask.png', link: '/gameCode/tomb-of-the-mask', path: '/play', favorite: false },
     ];
-
-   const buttonContainer = document.getElementById('buttonContainer');
+    const buttonContainer = document.getElementById('buttonContainer');
     const searchInput = document.getElementById('search');
     const counterDisplay = document.getElementById('counterDisplay');
     const sortOptions = document.getElementById('sortOptions');
@@ -86,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function createButton(button) {
         const a = document.createElement('a');
         a.className = 'menu-button';
-        a.href = button.path;
+        a.href = '#';
 
         let count = getClickCount(button.name);
 
@@ -101,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const popUp = document.createElement('div');
         popUp.className = 'popup';
-        popUp.innerText = Clicked: ${count} clicks;
+        popUp.innerText = `Clicked: ${count} clicks`;
         a.appendChild(popUp);
 
         // Font Awesome favorite icon
@@ -117,17 +116,24 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         a.appendChild(favoriteIcon);
 
-        a.addEventListener('click', () => {
-            count++;
-            setClickCount(button.name, count);
-            sessionStorage.setItem('gameLink', button.link);
-            sessionStorage.setItem('gameName', button.name);
-            sessionStorage.setItem('gameImage', button.image);
+        a.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default navigation behavior
+            a.classList.add('flipped'); // Add flip effect
+            setTimeout(() => {
+                // After animation, navigate to the link
+                count++;
+                setClickCount(button.name, count);
+                sessionStorage.setItem('gameLink', button.link);
+                sessionStorage.setItem('gameName', button.name);
+                sessionStorage.setItem('gameImage', button.image);
 
-            const iframe = document.getElementById('myIframe');
-            iframe.src = button.link;
-            const name = document.getElementById('game-name');
-            name.innerText = button.name;
+                const iframe = document.getElementById('myIframe');
+                iframe.src = button.link;
+                const name = document.getElementById('game-name');
+                name.innerText = button.name;
+                // Navigate to the path
+                window.location.href = button.path;
+            }, 600); // Wait for animation to complete
         });
 
         return a;
@@ -161,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
             buttonContainer.appendChild(createButton(button));
         });
 
-        counterDisplay.textContent = ${filteredButtons.length} Games Loaded;
+        counterDisplay.textContent = `${filteredButtons.length} Games Loaded`;
     }
 
     searchInput.addEventListener('input', (e) => {
@@ -175,6 +181,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const starredOption = document.createElement('option');
     starredOption.value = 'starred';
     starredOption.textContent = 'Sort By Starred';
+    sortOptions.appendChild(starredOption);
+
+    renderButtons();
+});
     sortOptions.appendChild(starredOption);
 
     renderButtons();
