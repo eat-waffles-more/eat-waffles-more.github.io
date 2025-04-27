@@ -52,43 +52,37 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'Tomb of The Mask', image: '/images/tombofthemask.png', link: '/gameCode/tomb-of-the-mask', path: '/play', favorite: false },
     ];
 
-    const buttonContainer = document.getElementById('buttonContainer');
+   const buttonContainer = document.getElementById('buttonContainer');
     const searchInput = document.getElementById('search');
     const counterDisplay = document.getElementById('counterDisplay');
     const sortOptions = document.getElementById('sortOptions');
 
     let showClickCounts = false;
 
-    // Function to get the click count for a specific button from localStorage
     function getClickCount(buttonName) {
         const count = localStorage.getItem(buttonName);
         return count ? parseInt(count) : 0;
     }
 
-    // Function to set the click count for a specific button in localStorage
     function setClickCount(buttonName, count) {
         localStorage.setItem(buttonName, count);
     }
 
-    // Function to get the favorite status of a button from localStorage
     function getFavoriteStatus(buttonName) {
         const status = localStorage.getItem(buttonName + '_favorite');
         return status === 'true';
     }
 
-    // Function to set the favorite status of a button in localStorage
     function setFavoriteStatus(buttonName, status) {
         localStorage.setItem(buttonName + '_favorite', status);
     }
 
-    // Function to toggle the favorite status
     function toggleFavorite(button) {
         button.favorite = !button.favorite;
         setFavoriteStatus(button.name, button.favorite);
-        renderButtons(searchInput.value, sortOptions.value); // Re-render to update the order
+        renderButtons(searchInput.value, sortOptions.value);
     }
 
-    // Function to create each button
     function createButton(button) {
         const a = document.createElement('a');
         a.className = 'menu-button';
@@ -110,44 +104,45 @@ document.addEventListener('DOMContentLoaded', function () {
         popUp.innerText = `Clicked: ${count} clicks`;
         a.appendChild(popUp);
 
+        // Font Awesome favorite icon
         const favoriteIcon = document.createElement('span');
         favoriteIcon.className = 'favorite-icon';
-        favoriteIcon.innerText = button.favorite ? '★' : '☆'; // Filled or empty star
+        const icon = document.createElement('i');
+        icon.className = button.favorite ? 'fa-solid fa-star' : 'fa-regular fa-star';
+        favoriteIcon.appendChild(icon);
         favoriteIcon.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevent triggering the game click event
+            e.stopPropagation();
             toggleFavorite(button);
+            icon.className = button.favorite ? 'fa-solid fa-star' : 'fa-regular fa-star';
         });
         a.appendChild(favoriteIcon);
 
         a.addEventListener('click', () => {
-    count++;
-    setClickCount(button.name, count);
-    sessionStorage.setItem('gameLink', button.link);
-    sessionStorage.setItem('gameName', button.name);
-    sessionStorage.setItem('gameImage', button.image);
+            count++;
+            setClickCount(button.name, count);
+            sessionStorage.setItem('gameLink', button.link);
+            sessionStorage.setItem('gameName', button.name);
+            sessionStorage.setItem('gameImage', button.image);
 
-    // Update iframe on the current page instead of navigating to viewer.html
-    const iframe = document.getElementById('myIframe');
-    iframe.src = button.link;
-    const name = document.getElementById('game-name');
-    name.innerText = button.name; // Correctly set the game name
-});
+            const iframe = document.getElementById('myIframe');
+            iframe.src = button.link;
+            const name = document.getElementById('game-name');
+            name.innerText = button.name;
+        });
 
         return a;
     }
 
-    // Function to render buttons and filter them by search input
     function renderButtons(filter = '', sortBy = 'alphabetical') {
-        buttonContainer.innerHTML = ''; // Clear current buttons
+        buttonContainer.innerHTML = '';
 
         let sortedButtons;
 
         if (sortBy === 'starred') {
-            // Sort by starred games first
             sortedButtons = buttons.sort((a, b) => {
                 const favoriteA = getFavoriteStatus(a.name);
                 const favoriteB = getFavoriteStatus(b.name);
-                return favoriteB - favoriteA; // Show favorites first
+                return favoriteB - favoriteA;
             });
         } else if (sortBy === 'clickCount') {
             sortedButtons = buttons.sort((a, b) => {
@@ -159,18 +154,16 @@ document.addEventListener('DOMContentLoaded', function () {
             sortedButtons = buttons.sort((a, b) => a.name.localeCompare(b.name));
         }
 
-        // Filter buttons based on search input
         const filteredButtons = sortedButtons.filter(button => button.name.toLowerCase().includes(filter.toLowerCase()));
 
         filteredButtons.forEach(button => {
-            button.favorite = getFavoriteStatus(button.name); // Get the current favorite status
+            button.favorite = getFavoriteStatus(button.name);
             buttonContainer.appendChild(createButton(button));
         });
 
         counterDisplay.textContent = `${filteredButtons.length} Games Loaded`;
     }
 
-    // Event listeners for search and sort inputs
     searchInput.addEventListener('input', (e) => {
         renderButtons(e.target.value, sortOptions.value);
     });
@@ -179,12 +172,10 @@ document.addEventListener('DOMContentLoaded', function () {
         renderButtons(searchInput.value, e.target.value);
     });
 
-    // Add the "Sort By Starred" option to the dropdown
     const starredOption = document.createElement('option');
     starredOption.value = 'starred';
     starredOption.textContent = 'Sort By Starred';
     sortOptions.appendChild(starredOption);
 
-    renderButtons(); // Initial rendering
-
+    renderButtons();
 });
