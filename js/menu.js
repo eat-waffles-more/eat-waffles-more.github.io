@@ -110,11 +110,13 @@ document.addEventListener('DOMContentLoaded', function () {
         const icon = document.createElement('i');
         icon.className = button.favorite ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
         favoriteIcon.appendChild(icon);
+
         favoriteIcon.addEventListener('click', (e) => {
-            e.stopPropagation();
+            e.stopPropagation(); // Prevent the click event from bubbling up to the <a> element
             toggleFavorite(button);
             icon.className = button.favorite ? 'fa-solid fa-thumbs-up' : 'fa-regular fa-thumbs-up';
         });
+
         a.appendChild(favoriteIcon);
 
         a.addEventListener('click', () => {
