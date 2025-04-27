@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const elementsToObserve = ['desc-1', 'desc-2'];
 
-  const observer = new IntersectionObserver((entries, obs) => {
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('fade-in');
-        obs.unobserve(entry.target); // Only run once per element
+      } else {
+        entry.target.classList.remove('fade-in');
       }
     });
   }, { threshold: 0.1 });
