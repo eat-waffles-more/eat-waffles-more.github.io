@@ -10,6 +10,14 @@
     color: #fff;
     width: 30%;
     outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.7s, box-shadow 0.7s, transform 0.7s;
+    transform: scale(1);
+}
+.search:hover {
+    background-color: #90d5ff;
+    transform: scale(0.9);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
 }
 .button-container {
      display: flex;
@@ -111,8 +119,8 @@ button {
 
 #sortOptions:hover {
     background-color: lightblue;
-    transform: scale(1.1);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(0.9);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
 }
 
 #sortOptions option {
