@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="/reviews"><i class="fa fa-star fa-lg"></i></a>
         <a href="/contact" class="margin"><i class="fa fa-user fa-lg"></i></a>
         <a href="/contact"><i class="fa-solid fa-envelope"></i></a>
+        <a target="blank" href="https://github.com/eat-waffles-more"><i class="fa-brands fa-github fa-lg"></i></a>
       </div>
       </div>
       <!-- Right section: Profile information -->
