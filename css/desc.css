@@ -1,1 +1,29 @@
+#desc-1 {
+  border-top: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
 
+#desc-1 h1 {
+  font-size: 1.5rem;
+  color: lightblue;
+  font-family: Arial;
+  text-align: left;
+  width: 50%;
+}
+
+#desc-1 p {
+  color: white;
+  font-family: Arial;
+  width: 50%;
+  text-align: center;
+}
+
+#image-1 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
