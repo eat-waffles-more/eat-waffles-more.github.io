@@ -5,7 +5,6 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 0 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.08); /* 3D shadow for the container */
     border-radius: 10px; /* Optional: adds rounded corners */
   }
 
@@ -13,7 +12,6 @@
     display: flex;
     flex-direction: column; /* Stack the h1 and p vertically */
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Soft shadow around the text container */
     border-radius: 5px; /* Optional: adds rounded corners to the text container */
     padding: 20px; /* Adds some padding to avoid text touching the edges */
   }
@@ -42,7 +40,6 @@
     display: block;
     margin-top: 20px; /* Add space between the text and image */
     margin-bottom: 20px; /* Add space between the text and image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* 3D shadow for the image container */
     border-radius: 10px; /* Optional: adds rounded corners to the image container */
   }
 
@@ -51,5 +48,5 @@
     display: block;
     margin-left: 20px; /* Add space between the image and text */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Soft shadow for the image */
-    border-radius: 10px; /* Optional: adds rounded corners to the image */
+    border-radius: 25px; /* Optional: adds rounded corners to the image */
   }
