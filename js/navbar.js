@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="/theater"><i class="fa fa-tv fa-lg"></i></a>
         <a href="/forms"><i class="fa fa-clipboard-list fa-lg"></i></a>
         <a href="/reviews"><i class="fa fa-star fa-lg"></i></a>
-        <a href="/contact"><i class="fa fa-user fa-lg"></i></a>
+        <a href="/profile"><i class="fa fa-user fa-lg"></i></a>
         <a href="javascript:void(0);" class="extra"><i class="fa fa-plus fa-lg"></i></a>
         <div class="extra-buttons" style="display: none;">
         <a target="blank" href="https://github.com/eat-waffles-more"><i class="fa-brands fa-github fa-lg"></i></a>
