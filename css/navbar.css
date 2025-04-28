@@ -98,3 +98,15 @@
   line-height: 40px; /* Adjust line height to match avatar size */
   text-decoration: none; /* Remove underline from all links */
 }
+#searchBar {
+  background-color: rgba(173, 216, 230, 0.5); /* Light blue background with transparency */
+  backdrop-filter: blur(6px);
+  padding: 3px 7px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.5); /* Pink glow effect */
+  outline: none;
+  color: white;
+}
