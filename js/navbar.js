@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <!-- Left section: Logo and navigation links -->
       <div class="nav-left-bg">
         <a href="/index.html" class="logo" style="margin-right: 15px;">
-          <img src="/images/favicon.png" alt="Waffles Logo" style="height: 40px;">
+          <img src="/images/favicon.png" alt="Waffles Logo">
         </a>
         <div class="nav-links">
           <a href="/home"><i class="fa fa-home fa-lg"></i></a>
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <a href="/reviews"><i class="fa fa-star fa-lg"></i></a>
           <a href="/profile"><i class="fa fa-user fa-lg"></i></a>
           <a href="javascript:void(0);" class="extra"><i class="fa fa-plus fa-lg"></i></a>
-          <div class="extra-buttons" style="display: none; flex-direction: column; position: absolute; background: white; border: 1px solid #ccc; padding: 10px;">
+          <div class="extra-buttons">
             <a target="blank" href="https://github.com/eat-waffles-more"><i class="fa-brands fa-github fa-lg"></i></a>
             <a href="/terms"><i class="fa-solid fa-clipboard-check"></i></a>
             <a href="/privacy"><i class="fa-solid fa-user-lock"></i></a>
