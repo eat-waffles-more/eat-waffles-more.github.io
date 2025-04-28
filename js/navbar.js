@@ -31,18 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
       <!-- Middle section: Search bar -->
       <div class="nav-center" style="flex-grow: 1; display: flex; justify-content: center;">
-        <input type="text" id="searchBar" placeholder="Search by tag..." style="padding: 6px 12px; width: 300px; max-width: 90%; border-radius: 20px; border: 1px solid #ccc;">
+        <input type="text" id="searchBar" placeholder="Search by tag...">
       </div>
 
       <!-- Right section: Profile information -->
       <div class="nav-right-bg">
-        <a href="/profile" class="user-profile" style="display: flex; align-items: center; gap: 10px;">
+        <a href="/profile" class="user-profile">
           <img id="user-avatar" src="${avatarUrl}" alt="" class="avatar" style="height: 40px; width: 40px; border-radius: 50%;">
           <span id="user-name">Sign Up</span>
         </a>
       </div>
     </nav>
-    <div id="results" style="position: absolute; top: 70px; left: 50%; transform: translateX(-50%); background: white; border: 1px solid #ccc; width: 300px; max-width: 90%; z-index: 10;"></div>
+    <div id="results"></div>
   `;
 
   // Inject the navbar at the very top of the body
