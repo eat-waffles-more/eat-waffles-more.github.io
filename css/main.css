@@ -16,7 +16,10 @@ body {
 footer {
     opacity: 0.5;
 }
-footer nav {
+footer nav a {
+    opacity: 1;
+}
+footer nav p {
     opacity: 1;
 }
 h1 {
