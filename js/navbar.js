@@ -50,7 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const extraIcon = document.querySelector('.extra');
   const extraButtons = document.querySelector('.extra-buttons');
-
+  
+  extraButtons.style.display = 'none';
+  extraIcon.innerHTML = '<i class="fa fa-plus fa-lg"></i>';
+  
   extraIcon.addEventListener('click', () => {
     if (extraButtons.style.display === 'none') {
       extraButtons.style.display = 'flex';
