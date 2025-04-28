@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Check for a logged-in user in localStorage
-  const defaultAvatar = "/images/faavicon.png";
+  const defaultAvatar = "/images/favicon.png";
   let userAvatar = null;
   const avatarUrl = userAvatar ? userAvatar : defaultAvatar;
 
