@@ -17,7 +17,7 @@
 .nav-left-bg, .nav-right-bg {
   background-color: rgba(173, 216, 230, 0.5); /* Light blue background with transparency */
   backdrop-filter: blur(6px);
-  padding: 3px 7px;
+  padding: 5px 15px;
   border-radius: 50px;
   display: flex;
   align-items: center;
