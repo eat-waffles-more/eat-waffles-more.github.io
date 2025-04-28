@@ -46,7 +46,7 @@
          { name: 'Slither.IO', image: '/images/slitherio.png', link: '/sourceCode/slither-io', path: '/play', favorite: false },
          { name: 'Flappy Bird', image: '/images/flappybird.png', link: '/sourceCode/flappy-bird', path: '/play', favorite: false },
          { name: 'Slow Roads', image: '/images/slowroads.png', link: '/sourceCode/slow-roads', path: '/play', favorite: false },
-         { name: 'Slow Roads', image: '/images/blockblast.png', link: '/sourceCode/block-blast', path: '/play', favorite: false },
+         { name: 'Block Blast!', image: '/images/blockblast.png', link: '/sourceCode/block-blast', path: '/play', favorite: false },
      ];
  
     const buttonContainer = document.getElementById('buttonContainer');
