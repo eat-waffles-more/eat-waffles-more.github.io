@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       <!-- Middle section: Search bar -->
       <div class="nav-center" style="flex-grow: 1; display: flex; justify-content: center;">
-        <input type="text" id="searchBar" placeholder="Search by tag...">
+        <input type="text" id="searchBar" placeholder="Search this site...">
       </div>
 
       <!-- Right section: Profile information -->
@@ -66,9 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- JavaScript for the search ---
   const filesWithTags = [
-    { filename: "home.html", tags: ["home", "main", "start", "front"] },
-    { filename: "games.html", tags: ["play", "fun", "games", "game"] },
-    { filename: "reviews.html", tags: ["star", "reviews", "review", "rate", "us"] },
+    { filename: "home", tags: ["home", "main", "start", "front"] },
+    { filename: "games", tags: ["play", "fun", "games", "game"] },
+    { filename: "reviews", tags: ["star", "reviews", "review", "rate", "us"] },
   ];
 
   document.getElementById('searchBar').addEventListener('input', function(e) {
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     matchedFiles.forEach(file => {
       const link = document.createElement('a');
-      link.href = file.filename;
+      link.href = file.filename + .html;
       link.textContent = file.filename;
       link.style.display = 'block';
       link.style.padding = '10px';
