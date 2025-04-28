@@ -14,13 +14,7 @@ body {
     text-decoration: none; /* Remove underline from all links */
 }
 footer {
-    opacity: 0.5;
-}
-footer nav a {
-    opacity: 1;
-}
-footer nav p {
-    opacity: 1;
+    background-color: rgba(68, 85, 90, 0.5);
 }
 h1 {
     color: #fff;
