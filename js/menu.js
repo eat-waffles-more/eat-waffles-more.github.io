@@ -39,7 +39,7 @@
          { name: 'Stickman Parkour', image: '/images/stickmanparkour.png', link: '/sourceCode/stickman-parkour', path: '/play', favorite: false },
          { name: 'Recoil', image: '/images/recoil.png', link: '/sourceCode/recoil', path: '/play', favorite: false },
          { name: 'Google Snake', image: '/images/snake.png', link: '/sourceCode/snake', path: '/play', favorite: false },
-         { name: 'Moto X3m', image: '/images/motox3m.png', link: '/moto-x3m', path: '/play', favorite: false },
+         { name: 'Moto X3m', image: '/images/motox3m.png', link: '/sourceCode/moto-x3m', path: '/play', favorite: false },
          { name: 'Bacon May Die', image: '/images/baconmaydie.png', link: '/sourceCode/bacon-may-die', path: '/play', favorite: false },
          { name: 'Eaglercraft', image: '/images/eaglercraft.png', link: '/sourceCode/eaglercraft', path: '/play', favorite: false },
          { name: 'Asteroids', image: '/images/asteroids.png', link: '/sourceCode/asteroids', path: '/play', favorite: false },
