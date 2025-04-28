@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Construct the navbar HTML
   const navbarHTML = `
-    <nav class="navbar" style="display: flex; align-items: center; justify-content: space-between; padding: 10px;">
+    <nav class="navbar">
       <!-- Left section: Logo and navigation links -->
-      <div class="nav-left-bg" style="display: flex; align-items: center;">
+      <div class="nav-left-bg">
         <a href="/index.html" class="logo" style="margin-right: 15px;">
           <img src="/images/favicon.png" alt="Waffles Logo" style="height: 40px;">
         </a>
-        <div class="nav-links" style="display: flex; gap: 10px;">
+        <div class="nav-links">
           <a href="/home"><i class="fa fa-home fa-lg"></i></a>
           <a href="/games"><i class="fa fa-gamepad fa-lg"></i></a>
           <a href="/theater"><i class="fa fa-tv fa-lg"></i></a>
