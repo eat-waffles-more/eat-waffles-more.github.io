@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
 
       <!-- Right section: Profile information -->
-      <div class="nav-right-bg" style="display: flex; align-items: center;">
+      <div class="nav-right-bg">
         <a href="/profile" class="user-profile" style="display: flex; align-items: center; gap: 10px;">
           <img id="user-avatar" src="${avatarUrl}" alt="" class="avatar" style="height: 40px; width: 40px; border-radius: 50%;">
           <span id="user-name">Sign Up</span>
