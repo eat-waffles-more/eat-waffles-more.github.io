@@ -4,7 +4,7 @@
   justify-content: space-between;
   padding: 0 20px;
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 192, 203, 0.2);
   backdrop-filter: blur(10px);
   border-top: 5px solid #fff;
   border-bottom: 5px solid #fff;
@@ -70,7 +70,7 @@
   justify-content: space-between;
   padding: 0 20px;
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 192, 203, 0.2);
   backdrop-filter: blur(10px);
   border-top: 5px solid #fff;
   border-bottom: 5px solid #fff;
