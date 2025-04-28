@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tag Search</title>
+</head>
+<body>
+  <h1>Search Files by Tags</h1>
+  <input type="text" id="searchBar" placeholder="Search by tag..." />
+  <div id="results"></div>
+
+  <script>
+  const filesWithTags = [
+    { filename: "home.html", tags: ["home", "main", "start"] },
+    { filename: "games.html", tags: ["fun", "games", "play"] },
+  ];
+
+  document.getElementById('searchBar').addEventListener('input', function(e) {
+    const query = e.target.value.toLowerCase();
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = '';
+
+    if (query.trim() === '') return;
+
+    const matchedFiles = filesWithTags.filter(file =>
+      file.tags.some(tag => tag.includes(query))
+    );
+
+    if (matchedFiles.length === 0) {
+      resultsDiv.innerHTML = '<p>No results found.</p>';
+      return;
+    }
+
+    matchedFiles.forEach(file => {
+      const link = document.createElement('a');
+      link.href = file.filename;
+      link.textContent = file.filename;
+      link.style.display = 'block';
+      resultsDiv.appendChild(link);
+    });
+  });
+  </script>
+</body>
+</html>
+
