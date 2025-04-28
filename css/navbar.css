@@ -22,7 +22,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 0 10px rgba(255, 105, 180, 0.5); /* Pink glow effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .logo img {
@@ -106,7 +106,13 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 0 10px rgba(255, 105, 180, 0.5); /* Pink glow effect */
   outline: none;
   color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.7s, box-shadow 0.7s, transform 0.7s;
+  transform: scale(1);
+}
+#searchBar:hover {
+  transform: scale(1.02);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
 }
