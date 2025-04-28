@@ -3,42 +3,51 @@ document.addEventListener('DOMContentLoaded', () => {
   const defaultAvatar = "/images/faavicon.png";
   let userAvatar = null;
   const avatarUrl = userAvatar ? userAvatar : defaultAvatar;
+
   // Construct the navbar HTML
   const navbarHTML = `
-    <nav class="navbar">
+    <nav class="navbar" style="display: flex; align-items: center; justify-content: space-between; padding: 10px;">
       <!-- Left section: Logo and navigation links -->
-      <div class="nav-left-bg">
-        <a href="/index.html" class="logo">
-          <img src="/images/favicon.png" alt="Waffles Logo">
+      <div class="nav-left-bg" style="display: flex; align-items: center;">
+        <a href="/index.html" class="logo" style="margin-right: 15px;">
+          <img src="/images/favicon.png" alt="Waffles Logo" style="height: 40px;">
         </a>
-        <div class="nav-links">
+        <div class="nav-links" style="display: flex; gap: 10px;">
           <a href="/home"><i class="fa fa-home fa-lg"></i></a>
-        <a href="/games"><i class="fa fa-gamepad fa-lg"></i></a>
-        <a href="/theater"><i class="fa fa-tv fa-lg"></i></a>
-        <a href="/forms"><i class="fa fa-clipboard-list fa-lg"></i></a>
-        <a href="/reviews"><i class="fa fa-star fa-lg"></i></a>
-        <a href="/profile"><i class="fa fa-user fa-lg"></i></a>
-        <a href="javascript:void(0);" class="extra"><i class="fa fa-plus fa-lg"></i></a>
-        <div class="extra-buttons" style="display: none;">
-        <a target="blank" href="https://github.com/eat-waffles-more"><i class="fa-brands fa-github fa-lg"></i></a>
-        <a href="/terms"><i class="fa-solid fa-clipboard-check"></i></a>
-        <a href="/privacy"><i class="fa-solid fa-user-lock"></i></a>
-        <a href="/contact"><i class="fa-solid fa-envelope"></i></a>
+          <a href="/games"><i class="fa fa-gamepad fa-lg"></i></a>
+          <a href="/theater"><i class="fa fa-tv fa-lg"></i></a>
+          <a href="/forms"><i class="fa fa-clipboard-list fa-lg"></i></a>
+          <a href="/reviews"><i class="fa fa-star fa-lg"></i></a>
+          <a href="/profile"><i class="fa fa-user fa-lg"></i></a>
+          <a href="javascript:void(0);" class="extra"><i class="fa fa-plus fa-lg"></i></a>
+          <div class="extra-buttons" style="display: none; flex-direction: column; position: absolute; background: white; border: 1px solid #ccc; padding: 10px;">
+            <a target="blank" href="https://github.com/eat-waffles-more"><i class="fa-brands fa-github fa-lg"></i></a>
+            <a href="/terms"><i class="fa-solid fa-clipboard-check"></i></a>
+            <a href="/privacy"><i class="fa-solid fa-user-lock"></i></a>
+            <a href="/contact"><i class="fa-solid fa-envelope"></i></a>
+          </div>
         </div>
       </div>
+
+      <!-- Middle section: Search bar -->
+      <div class="nav-center" style="flex-grow: 1; display: flex; justify-content: center;">
+        <input type="text" id="searchBar" placeholder="Search by tag..." style="padding: 6px 12px; width: 300px; max-width: 90%; border-radius: 20px; border: 1px solid #ccc;">
       </div>
+
       <!-- Right section: Profile information -->
-      <div class="nav-right-bg">
-    <a href="/profile" class="user-profile">
-        <img id="user-avatar" src="${avatarUrl}" alt="" class="avatar">
-        <span id="user-name">Sign Up</span>
-      </a>
+      <div class="nav-right-bg" style="display: flex; align-items: center;">
+        <a href="/profile" class="user-profile" style="display: flex; align-items: center; gap: 10px;">
+          <img id="user-avatar" src="${avatarUrl}" alt="" class="avatar" style="height: 40px; width: 40px; border-radius: 50%;">
+          <span id="user-name">Sign Up</span>
+        </a>
       </div>
     </nav>
+    <div id="results" style="position: absolute; top: 70px; left: 50%; transform: translateX(-50%); background: white; border: 1px solid #ccc; width: 300px; max-width: 90%; z-index: 10;"></div>
   `;
 
   // Inject the navbar at the very top of the body
   document.body.insertAdjacentHTML('afterbegin', navbarHTML);
+
   const extraIcon = document.querySelector('.extra');
   const extraButtons = document.querySelector('.extra-buttons');
 
@@ -50,5 +59,39 @@ document.addEventListener('DOMContentLoaded', () => {
       extraButtons.style.display = 'none';
       extraIcon.innerHTML = '<i class="fa fa-plus fa-lg"></i>';
     }
+  });
+
+  // --- JavaScript for the search ---
+  const filesWithTags = [
+    { filename: "home.html", tags: ["home", "main", "start", "front"] },
+    { filename: "games.html", tags: ["play", "fun", "games", "game"] },
+    { filename: "reviews.html", tags: ["star", "reviews", "review", "rate", "us"] },
+  ];
+
+  document.getElementById('searchBar').addEventListener('input', function(e) {
+    const query = e.target.value.toLowerCase();
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = '';
+
+    if (query.trim() === '') return;
+
+    const matchedFiles = filesWithTags.filter(file =>
+      file.tags.some(tag => tag.includes(query))
+    );
+
+    if (matchedFiles.length === 0) {
+      resultsDiv.innerHTML = '<p style="padding: 10px;">No results found.</p>';
+      return;
+    }
+
+    matchedFiles.forEach(file => {
+      const link = document.createElement('a');
+      link.href = file.filename;
+      link.textContent = file.filename;
+      link.style.display = 'block';
+      link.style.padding = '10px';
+      link.style.borderBottom = '1px solid #eee';
+      resultsDiv.appendChild(link);
+    });
   });
 });
