@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <nav class="navbar">
       <!-- Left section: Logo and navigation links -->
       <div class="nav-left-bg">
-        <a href="/index.html" class="logo" style="margin-right: 15px;">
+        <a href="/index.html" class="logo">
           <img src="/images/favicon.png" alt="Waffles Logo">
         </a>
         <div class="nav-links">
@@ -50,9 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const extraIcon = document.querySelector('.extra');
   const extraButtons = document.querySelector('.extra-buttons');
-  
-  extraButtons.style.display = 'none';
-  extraIcon.innerHTML = '<i class="fa fa-plus fa-lg"></i>';
   
   extraIcon.addEventListener('click', () => {
     if (extraButtons.style.display === 'none') {
