@@ -34,7 +34,7 @@
          { name: 'Drive Mad', image: '/images/drivemad.png', link: '/sourceCode/drive-mad', path: '/play', favorite: false },
          { name: 'Stickman Hook', image: '/images/stickmanhook.png', link: '/sourceCode/stick-man-hook', path: '/play', favorite: false },
          { name: 'Cookie Clicker', image: '/images/cookieclicker.png', link: 'sourceCode/cookie-clicker', path: '/play', favorite: false },
-         { name: 'Stick Archer Battle', image: '/images/stickarcherbattle.png', link: '/stick-archer-battle', path: '/play', favorite: false },
+         { name: 'Stick Archer Battle', image: '/images/stickarcherbattle.png', link: '/stick-archers-battle', path: '/play', favorite: false },
          { name: 'Arena King', image: '/images/arenaking.png', link: '/sourceCode/arena-king', path: '/play', favorite: false },
          { name: 'Stickman Parkour', image: '/images/stickmanparkour.png', link: '/sourceCode/stickman-parkour', path: '/play', favorite: false },
          { name: 'Recoil', image: '/images/recoil.png', link: '/sourceCode/recoil', path: '/play', favorite: false },
@@ -45,7 +45,7 @@
          { name: 'Asteroids', image: '/images/asteroids.png', link: '/sourceCode/asteroids', path: '/play', favorite: false },
          { name: 'Slither.IO', image: '/images/slitherio.png', link: '/sourceCode/slither-io', path: '/play', favorite: false },
          { name: 'Flappy Bird', image: '/images/flappybird.png', link: '/sourceCode/flappy-bird', path: '/play', favorite: false },
-         { name: 'Slow Roads', image: '/images/slowroads.png', link: '/slow-roads', path: '/play', favorite: false },
+         { name: 'Slow Roads', image: '/images/slowroads.png', link: '/sourceCode/slow-roads', path: '/play', favorite: false },
      ];
  
     const buttonContainer = document.getElementById('buttonContainer');
