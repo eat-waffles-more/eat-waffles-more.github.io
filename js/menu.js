@@ -49,6 +49,7 @@
          { name: 'Block Blast!', image: '/images/blockblast.png', link: '/sourceCode/block-blast', path: '/play', favorite: false },
          { name: 'Crossy Road', image: '/images/crossyroad.png', link: '/sourceCode/crossy-road', path: '/play', favorite: false },
          { name: 'Cut The Rope', image: '/images/cuttherope.png', link: '/sourceCode/cut-the-rope', path: '/play', favorite: false },
+         { name: 'Getting Over It', image: '/images/gettingoverit.png', link: '/sourceCode/getting-over-it', path: '/play', favorite: false },
      ];
  
     const buttonContainer = document.getElementById('buttonContainer');
