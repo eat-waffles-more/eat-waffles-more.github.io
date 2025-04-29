@@ -125,10 +125,10 @@
   transform: translateX(-50%);
   width: 90%;
   max-width: 600px;
-  background: rgba(210, 180, 140, 0.8); /* Tan background with transparency */
+  background: rgba(173, 216, 230, 0.8); /* Tan background with transparency */
   backdrop-filter: blur(8px);
   border-radius: 20px;
-  box-shadow: 0 0 15px rgba(173, 216, 230, 0.7); /* Light blue glow */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Light blue glow */
   padding: 10px 20px;
   z-index: 999; /* Keep it above other content but below nav if needed */
 }
