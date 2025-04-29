@@ -54,6 +54,7 @@
          { name: 'Super Mario 64', image: '/images/mario64.png', link: '/sourceCode/mario-64', path: '/play', favorite: false },
          { name: 'Infinate Craft', image: '/images/infinatecraft.png', link: '/sourceCode/infinate-craft', path: '/play', favorite: false },
          { name: 'Pig Clicker', image: '/images/pigclicker.png', link: '/sourceCode/pig-clicker', path: '/play', favorite: false },
+         { name: 'Freehead Skate', image: '/images/freeheadskate.png', link: '/sourceCode/freehead-skate', path: '/play', favorite: false },
      ];
  
     const buttonContainer = document.getElementById('buttonContainer');
