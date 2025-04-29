@@ -50,6 +50,8 @@
          { name: 'Crossy Road', image: '/images/crossyroad.png', link: '/sourceCode/crossy-road', path: '/play', favorite: false },
          { name: 'Cut The Rope', image: '/images/cuttherope.png', link: '/sourceCode/cut-the-rope', path: '/play', favorite: false },
          { name: 'Getting Over It', image: '/images/gettingoverit.png', link: '/sourceCode/getting-over-it', path: '/play', favorite: false },
+         { name: 'Chrome Dino', image: '/images/chromedino.png', link: '/sourceCode/chrome-dino', path: '/play', favorite: false },
+         { name: 'Super Mario 64', image: '/images/mario64.png', link: '/sourceCode/mario-64', path: '/play', favorite: false },
      ];
  
     const buttonContainer = document.getElementById('buttonContainer');
