@@ -64,10 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Search functionality ---
   const filesWithTags = [
-    { filename: "home", tags: ["home", "main", "start", "front"] },
-    { filename: "games", tags: ["play", "fun", "games", "game"] },
-    { filename: "reviews", tags: ["star", "reviews", "review", "rate", "us"] },
-    { filename: "profile", tags: ["you", "your", "profile", "account", "edit", "my", "me"] },
+    { path: "/home", name: "Home Page", tags: ["home", "main", "start", "front", "page", "index"] },
+    { path: "/games", name: "Games", tags: ["play", "fun", "games", "game", "page", "yay"] },
+    { path: "/reviews", name: "Reviews", tags: ["star", "reviews", "review", "rate", "us", "page", "share", "your", "my", "thoughts"] },
+    { path: "/profile", name: "Your Profile", tags: ["you", "your", "profile", "account", "edit", "my", "me", "page"] },
+    { path: "/terms", name: "Terms of Service", tags: ["rules", "terms", "of", "and", "conditions", "page", "service", "legal", "licence"] },
+    { path: "/privacy", name: "Privacy Policy", tags: ["your", "safe", "safety", "privacy", "policy", "private", "information", "info", "security", "page"] },
   ];
 
   document.getElementById('searchBar').addEventListener('input', function(e) {
@@ -89,8 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       matchedFiles.forEach(file => {
         const link = document.createElement('a');
-        link.href = file.filename + ".html";
-        link.textContent = file.filename;
+        link.href = file.path;
+        link.textContent = file.name;
         link.style.display = 'block';
         link.style.padding = '10px';
         link.style.borderBottom = '1px solid #eee';
