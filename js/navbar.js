@@ -2,8 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Check for a logged-in user in localStorage
   const defaultAvatar = "/images/favicon.png";
   let userAvatar = null;
-  const avatarUrl = userAvatar ? userAvatar : defaultAvatar;
-  document.getElementById('results').style.display = 'none';
+  const avatarUrl = userAvatar ? userAvatar : defaultAvatar
 
   // Construct the navbar HTML
   const navbarHTML = `
@@ -45,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </nav>
     <div id="results"></div>
   `;
-
+  document.getElementById('results').style.display = 'none';
   // Inject the navbar at the very top of the body
   document.body.insertAdjacentHTML('afterbegin', navbarHTML);
 
