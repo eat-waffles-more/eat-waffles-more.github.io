@@ -1,1 +1,1 @@
-Waffles!
+WAFFLES
