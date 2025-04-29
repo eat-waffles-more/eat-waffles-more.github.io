@@ -128,8 +128,8 @@
 
 /* Results container */
 #results {
-  position: absolute;
-  top: 80px; /* Adjust based on navbar height */
+  position: fixed; /* <- CHANGED from absolute to fixed */
+  top: 80px; /* still under the navbar */
   left: 50%;
   transform: translateX(-50%) translateY(-10px);
   width: 90%;
@@ -145,12 +145,13 @@
   transition: all 0.4s ease;
 }
 
-/* When active, make results visible */
+/* When active */
 #results.active {
   opacity: 1;
   pointer-events: auto;
   transform: translateX(-50%) translateY(0px);
 }
+
 
 /* Each search result link */
 #results a {
