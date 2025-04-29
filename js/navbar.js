@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const defaultAvatar = "/images/favicon.png";
   let userAvatar = null;
   const avatarUrl = userAvatar ? userAvatar : defaultAvatar;
+  document.getElementById('results').style.display = 'none';
 
   // Construct the navbar HTML
   const navbarHTML = `
@@ -50,6 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const extraIcon = document.querySelector('.extra');
   const extraButtons = document.querySelector('.extra-buttons');
+
+  extraButtons.style.display = 'none';
+  extraIcon.innerHTML = '<i class="fa fa-plus fa-lg"></i>';
   
   extraIcon.addEventListener('click', () => {
     if (extraButtons.style.display === 'none') {
@@ -67,31 +71,34 @@ document.addEventListener('DOMContentLoaded', () => {
     { filename: "games", tags: ["play", "fun", "games", "game"] },
     { filename: "reviews", tags: ["star", "reviews", "review", "rate", "us"] },
   ];
-
   document.getElementById('searchBar').addEventListener('input', function(e) {
-    const query = e.target.value.toLowerCase();
-    const resultsDiv = document.getElementById('results');
-    resultsDiv.innerHTML = '';
+  const query = e.target.value.toLowerCase();
+  const resultsDiv = document.getElementById('results');
+  resultsDiv.innerHTML = '';
 
-    if (query.trim() === '') return;
+  if (query.trim() === '') {
+    resultsDiv.style.display = 'none'; // Hide results if input is empty
+    return;
+  }
 
-    const matchedFiles = filesWithTags.filter(file =>
-      file.tags.some(tag => tag.includes(query))
-    );
+  resultsDiv.style.display = 'block'; // Show results when typing
 
-    if (matchedFiles.length === 0) {
-      resultsDiv.innerHTML = '<p style="padding: 10px;">No results found.</p>';
-      return;
-    }
+  const matchedFiles = filesWithTags.filter(file =>
+    file.tags.some(tag => tag.includes(query))
+  );
 
-    matchedFiles.forEach(file => {
-      const link = document.createElement('a');
-      link.href = file.filename + ".html";
-      link.textContent = file.filename;
-      link.style.display = 'block';
-      link.style.padding = '10px';
-      link.style.borderBottom = '1px solid #eee';
-      resultsDiv.appendChild(link);
-    });
+  if (matchedFiles.length === 0) {
+    resultsDiv.innerHTML = '<p style="padding: 10px;">No results found.</p>';
+    return;
+  }
+
+  matchedFiles.forEach(file => {
+    const link = document.createElement('a');
+    link.href = file.filename + ".html";
+    link.textContent = file.filename;
+    link.style.display = 'block';
+    link.style.padding = '10px';
+    link.style.borderBottom = '1px solid #eee';
+    resultsDiv.appendChild(link);
   });
 });
