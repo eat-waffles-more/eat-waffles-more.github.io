@@ -48,7 +48,7 @@
          { name: 'Slow Roads', image: '/images/slowroads.png', link: '/sourceCode/slow-roads', path: '/play', favorite: false },
          { name: 'Block Blast!', image: '/images/blockblast.png', link: '/sourceCode/block-blast', path: '/play', favorite: false },
          { name: 'Crossy Road', image: '/images/crossyroad.png', link: '/sourceCode/crossy-road', path: '/play', favorite: false },
-         { name: 'Cut The Rope', image: '/images/cuttherope.png', link: '/cut-the-rope', path: '/play', favorite: false },
+         { name: 'Cut The Rope', image: '/images/cuttherope.png', link: '/sourceCode/cut-the-rope', path: '/play', favorite: false },
      ];
  
     const buttonContainer = document.getElementById('buttonContainer');
