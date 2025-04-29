@@ -109,7 +109,7 @@
   outline: none;
   color: white;
   border: none;
-  font-size: 15px;
+  font-size: 2.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   transition: background-color 0.7s, box-shadow 0.7s, transform 0.7s;
   transform: scale(1);
