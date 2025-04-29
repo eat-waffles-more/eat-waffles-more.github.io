@@ -1,3 +1,10 @@
+// Inject the navbar at the very top of the body
+document.body.insertAdjacentHTML('afterbegin', navbarHTML);
+
+// NOW the #results div exists, so you can safely hide it
+const resultsDiv = document.getElementById('results');
+resultsDiv.style.display = 'none';
+
 document.addEventListener('DOMContentLoaded', () => {
   // Check for a logged-in user in localStorage
   const defaultAvatar = "/images/favicon.png";
