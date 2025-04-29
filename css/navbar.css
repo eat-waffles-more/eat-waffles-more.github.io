@@ -118,3 +118,37 @@
   transform: scale(1.02);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
 }
+#results {
+  position: absolute;
+  top: 80px; /* below the navbar (adjust if your navbar height changes) */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 600px;
+  background: rgba(210, 180, 140, 0.8); /* Tan background with transparency */
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(173, 216, 230, 0.7); /* Light blue glow */
+  padding: 10px 20px;
+  z-index: 999; /* Keep it above other content but below nav if needed */
+}
+
+#results a {
+  display: block;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: rgba(255, 105, 180, 0.6); /* Light pink background */
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(173, 216, 230, 0.5);
+}
+
+#results a:hover {
+  background-color: rgba(210, 180, 140, 1); /* Tan on hover */
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.7); /* Pink glow */
+  transform: scale(1.05);
+}
