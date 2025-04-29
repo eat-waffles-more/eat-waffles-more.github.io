@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { filename: "home", tags: ["home", "main", "start", "front"] },
     { filename: "games", tags: ["play", "fun", "games", "game"] },
     { filename: "reviews", tags: ["star", "reviews", "review", "rate", "us"] },
+    { filename: "profile", tags: ["you", "your", "profile", "account", "edit", "my", "me"] },
   ];
 
   document.getElementById('searchBar').addEventListener('input', function(e) {
