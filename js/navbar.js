@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     matchedFiles.forEach(file => {
       const link = document.createElement('a');
-      link.href = file.filename + .html;
+      link.href = file.filename + ".html";
       link.textContent = file.filename;
       link.style.display = 'block';
       link.style.padding = '10px';
