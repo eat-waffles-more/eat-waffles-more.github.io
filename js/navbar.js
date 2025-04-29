@@ -1,13 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Check for a logged-in user in localStorage
+  // Default avatar handling
   const defaultAvatar = "/images/favicon.png";
-  let userAvatar = null; // You can replace this with your user loading logic
+  let userAvatar = null;
   const avatarUrl = userAvatar ? userAvatar : defaultAvatar;
 
-  // Construct the navbar HTML
+  // Navbar HTML
   const navbarHTML = `
     <nav class="navbar">
-      <!-- Left section: Logo and navigation links -->
       <div class="nav-left-bg">
         <a href="/index.html" class="logo">
           <img src="/images/favicon.png" alt="Waffles Logo">
@@ -20,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <a href="/reviews"><i class="fa fa-star fa-lg"></i></a>
           <a href="/profile"><i class="fa fa-user fa-lg"></i></a>
           <a href="javascript:void(0);" class="extra"><i class="fa fa-plus fa-lg"></i></a>
-          <div class="extra-buttons" style="display: none;">
+          <div class="extra-buttons">
             <a target="_blank" href="https://github.com/eat-waffles-more"><i class="fa-brands fa-github fa-lg"></i></a>
             <a href="/terms"><i class="fa-solid fa-clipboard-check"></i></a>
             <a href="/privacy"><i class="fa-solid fa-user-lock"></i></a>
@@ -29,12 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>
 
-      <!-- Middle section: Search bar -->
       <div class="nav-center" style="flex-grow: 1; display: flex; justify-content: center;">
         <input type="text" id="searchBar" placeholder="Search this site...">
       </div>
 
-      <!-- Right section: Profile information -->
       <div class="nav-right-bg">
         <a href="/profile" class="user-profile">
           <img id="user-avatar" src="${avatarUrl}" alt="" class="avatar" style="height: 40px; width: 40px; border-radius: 50%;">
@@ -45,19 +42,15 @@ document.addEventListener('DOMContentLoaded', () => {
     <div id="results"></div>
   `;
 
-  // Inject the navbar at the very top of the body
+  // Add navbar to page
   document.body.insertAdjacentHTML('afterbegin', navbarHTML);
 
-  // NOW the navbar and #results exist
-  const resultsDiv = document.getElementById('results');
-  resultsDiv.style.display = 'none'; // Hide initially
-
+  // Extra buttons show/hide toggle
   const extraIcon = document.querySelector('.extra');
   const extraButtons = document.querySelector('.extra-buttons');
 
-  // Toggle extra buttons when clicking the '+' icon
   extraIcon.addEventListener('click', () => {
-    if (extraButtons.style.display === 'none') {
+    if (extraButtons.style.display === 'none' || extraButtons.style.display === '') {
       extraButtons.style.display = 'flex';
       extraIcon.innerHTML = '<i class="fa fa-minus fa-lg"></i>';
     } else {
@@ -66,23 +59,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Example files and tags for search functionality
+  // --- Search functionality ---
   const filesWithTags = [
     { filename: "home", tags: ["home", "main", "start", "front"] },
     { filename: "games", tags: ["play", "fun", "games", "game"] },
     { filename: "reviews", tags: ["star", "reviews", "review", "rate", "us"] },
-    { filename: "theater", tags: ["movies", "theater", "watch", "shows"] },
-    { filename: "forms", tags: ["forms", "feedback", "contact", "submit"] },
-    { filename: "profile", tags: ["user", "profile", "account", "settings"] }
   ];
 
-  // Search bar logic
   document.getElementById('searchBar').addEventListener('input', function(e) {
     const query = e.target.value.toLowerCase();
+    const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = '';
 
     if (query.trim() === '') {
-      resultsDiv.style.display = 'none'; // Hide results if search bar is empty
+      resultsDiv.classList.remove('active');
       return;
     }
 
@@ -97,10 +87,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const link = document.createElement('a');
         link.href = file.filename + ".html";
         link.textContent = file.filename;
+        link.style.display = 'block';
+        link.style.padding = '10px';
+        link.style.borderBottom = '1px solid #eee';
         resultsDiv.appendChild(link);
       });
     }
 
-    resultsDiv.style.display = 'block'; // Always show results if there is a query
+    // Slide down animation
+    resultsDiv.classList.add('active');
   });
 });
