@@ -99,44 +99,60 @@
   text-decoration: none; /* Remove underline from all links */
 }
 #searchBar {
-  background-color: rgba(173, 216, 230, 0.5); /* Light blue background with transparency */
+  background-color: rgba(173, 216, 230, 0.5);
   backdrop-filter: blur(6px);
-  padding: 5px 9px;
+  padding: 3px 7px;
   border-radius: 50px;
   display: flex;
   align-items: center;
   gap: 10px;
   outline: none;
   color: white;
-  border: 3px solid #fff;
-  font-size: 1.5rem;
+  border: none;
+  font-size: 2.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   transition: background-color 0.7s, box-shadow 0.7s, transform 0.7s;
   transform: scale(1);
 }
+
+/* Make the search placeholder white */
 #searchBar::placeholder {
   color: white;
   opacity: 1;
 }
+
 #searchBar:hover {
   transform: scale(1.02);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
 }
+
+/* Results container */
 #results {
   position: absolute;
-  top: 80px; /* below the navbar (adjust if your navbar height changes) */
+  top: 80px; /* Adjust based on navbar height */
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-10px);
   width: 90%;
   max-width: 600px;
-  background: rgba(173, 216, 230, 0.8); /* Tan background with transparency */
+  background: rgba(173, 216, 230, 0.8);
   backdrop-filter: blur(8px);
   border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Light blue glow */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   padding: 10px 20px;
-  z-index: 999; /* Keep it above other content but below nav if needed */
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
 }
 
+/* When active, make results visible */
+#results.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0px);
+}
+
+/* Each search result link */
 #results a {
   display: block;
   padding: 10px;
