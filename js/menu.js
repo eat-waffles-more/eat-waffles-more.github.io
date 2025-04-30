@@ -3,7 +3,7 @@
          { name: '2048', image: '/images/2048.png', link: '/sourceCode/2048', path: '/play', favorite: false },
          { name: 'Snow Rider', image: '/images/snowrider.png', link: 'https://www.hoodamath.com/mobile/games/snow-rider-3d/game.html?nocheckorient=1', path: '/play', favorite: false },
          { name: 'OvO', image: '/images/ovo.png', link: 'https://www.hoodamath.com/mobile/games/ovo/game.html?nocheckorient=1', path: '/play', favorite: false },
-         { name: 'Geometry Dash', image: '/images/geometrydash.png', link: 'https://www.hoodamath.com/mobile/games/geometry-dash/game.html?nocheckorient=1', path: '/play', favorite: false },
+         { name: 'Geometry Dash', image: '/images/geometrydash.png', link: '/sourceCode/geometry-dash', path: '/play', favorite: false },
          { name: 'Tiny Fishing', image: '/images/tinyfishing.png', link: 'https://www.hoodamath.com/mobile/games/hooda-tiny-fishing/game.html?nocheckorient=1', path: '/play', favorite: false },
          { name: 'Guess Word', image: '/images/guessword.png', link: 'https://www.hoodamath.com/mobile/games/guess-word/game.html?nocheckorient=1', path: '/play', favorite: false },
          { name: 'Draw to Smash', image: '/images/drawtosmash.png', link: 'https://www.hoodamath.com/mobile/games/draw-to-smash/game.html?nocheckorient=1', path: '/play', favorite: false },
