@@ -1,7 +1,6 @@
 # Release date of Waffles
 
-Waffles will release september 1st 2025, with over 300 games WOW!
-
+Go to www.skibidirizzler.global.ssl.fastly.net
 # Our Mission
 
 here at Waffles, our mission is simple: we want to keep you entertained, whether you’re in the classroom, at home, or anywhere else. In today’s digital age, where entertainment and learning are often just a few clicks away, it’s crucial to have access to fun and engaging content regardless of the environment you're in. We understand how frustrating it can be when websites are blocked, or you can’t access your favorite games, videos, or entertainment due to restrictions in place at school or work. That’s why we’ve made it our priority to offer you a variety of domains, ensuring that no matter where you are, you’ll always have an unblocked link to enjoy.
