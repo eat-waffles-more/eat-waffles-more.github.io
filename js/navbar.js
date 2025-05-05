@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
 
       <div class="nav-center" style="flex-grow: 1; display: flex; justify-content: center;">
-        <input type="text" id="searchBar" placeholder="Search this site...">
+        <input type="text" id="searchBar" placeholder="Search this site..." autocomplete="off>
       </div>
 
       <div class="nav-right-bg">
