@@ -24,7 +24,7 @@
          { name: "Low's Adventures 3", image: '/images/lowsadventures3.png', link: 'https://www.hoodamath.com/mobile/games/lows-adventures-3/game.html?nocheckorient=1', path: '/play', favorite: false },
          { name: 'Draw the Rest', image: '/images/drawtherest.png', link: 'https://www.hoodamath.com/mobile/games/draw-the-rest/game.html?nocheckorient=1', path: '/play', favorite: false },
          { name: 'Car Rush', image: '/images/carrush.png', link: 'https://www.hoodamath.com/mobile/games/car-rush/game.html?nocheckorient=1', path: '/play', favorite: false },
-         { name: 'Opposite Day', image: '/images/oppositeday.png', link: 'https://www.hoodamath.com/mobile/games/opposite-day/game.html?nocheckorient=1', path: '/play', favorite: false },
+         { name: 'Opposite Day', image: '/images/oppositedaygame.png', link: 'https://www.hoodamath.com/mobile/games/opposite-day/game.html?nocheckorient=1', path: '/play', favorite: false },
          { name: 'Wordle', image: '/images/wordle.png', link: 'https://wordleunlimited.org/#google_vignette', path: '/play', favorite: false },
          { name: 'Helix Jump', image: '/images/helixjump.png', link: '/sourceCode/helix-jump', path: '/play', favorite: false },
          { name: 'Are you Human?', image: '/images/areyouhuman.png', link: 'https://www.hoodamath.com/mobile/games/are-you-human/game.html?nocheckorient=1', path: '/play', favorite: false },
