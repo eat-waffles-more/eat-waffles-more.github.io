@@ -115,7 +115,7 @@
              buttonContainer.appendChild(createButton(button));
          });
  
-         counterDisplay.textContent = `${filteredButtons.length} Games Loaded`;
+         counterDisplay.textContent = `${filteredButtons.length} Shows Loaded`;
      }
  
      searchInput.addEventListener('input', (e) => {
