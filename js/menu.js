@@ -143,6 +143,7 @@
             iframe.src = button.link;
             const name = document.getElementById('game-name');
             name.innerText = button.name;
+            window.href = button.path;
         });
 
         return a;
