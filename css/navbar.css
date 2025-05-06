@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
 
+/* Keyframes */
 @keyframes fadeSlideDown {
   from {
     opacity: 0;
@@ -33,11 +34,13 @@
   50% { transform: scale(1.15); }
 }
 
+/* General Reset */
 body {
   margin: 0;
   font-family: 'Space Grotesk', sans-serif;
 }
 
+/* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
@@ -53,9 +56,16 @@ body {
   backdrop-filter: blur(8px);
   box-shadow: 0 0 10px rgba(173, 216, 230, 0.5);
   animation: fadeSlideDown 0.8s ease-out;
+  transition: transform 0.5s ease-in-out;
 }
 
-.nav-left-bg, .nav-right-bg {
+.navbar-hidden {
+  transform: translateY(-100%);
+}
+
+/* NAVBAR Inner Blocks */
+.nav-left-bg,
+.nav-right-bg {
   background-color: rgba(173, 216, 230, 0.5);
   backdrop-filter: blur(6px);
   padding: 3px 7px;
@@ -66,17 +76,21 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
+/* Logo */
 .logo img {
   height: 65px;
   width: auto;
 }
 
-.nav-links, .extra-buttons {
+/* Nav links and buttons */
+.nav-links,
+.extra-buttons {
   display: flex;
   gap: 5px;
 }
 
-.nav-links a, .extra-buttons a {
+.nav-links a,
+.extra-buttons a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,23 +104,28 @@ body {
   animation: fadeIn 0.6s ease-in;
 }
 
-.nav-links a:hover, .extra-buttons a:hover {
+.nav-links a:hover,
+.extra-buttons a:hover {
   background-color: rgba(210, 180, 140, 1);
   box-shadow: 0 0 15px rgba(255, 105, 180, 0.8);
   transform: scale(1.1);
 }
 
-.nav-links a:hover i, .extra-buttons a:hover i {
-  animation: bounce 0.4s ease;
-}
-
-.nav-links a i, .extra-buttons a i {
+/* Icons inside links */
+.nav-links a i,
+.extra-buttons a i {
   color: white;
   font-size: 1.5em;
   text-shadow: 0 0 5px rgba(255, 105, 180, 0.8);
   transition: transform 0.3s ease;
 }
 
+.nav-links a:hover i,
+.extra-buttons a:hover i {
+  animation: bounce 0.4s ease;
+}
+
+/* User Profile */
 .user-profile {
   display: flex;
   align-items: center;
@@ -122,11 +141,13 @@ body {
   border: 2px solid white;
   transition: all 0.3s ease;
 }
+
 .avatar:hover {
   border: 3px solid lightgreen;
   animation: rotateScale 0.6s ease;
 }
 
+/* Username */
 #user-name {
   color: white;
   font-weight: 600;
@@ -134,8 +155,10 @@ body {
   white-space: nowrap;
   line-height: 40px;
   display: inline-block;
+  text-decoration: none;
 }
 
+/* Search Bar */
 #searchBar {
   background-color: rgba(173, 216, 230, 0.5);
   backdrop-filter: blur(6px);
@@ -163,6 +186,7 @@ body {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
 }
 
+/* Search Results */
 #results {
   position: fixed;
   top: 80px;
@@ -208,6 +232,7 @@ body {
   transform: scale(1.05);
 }
 
+/* Extra buttons slide animation */
 .extra-buttons {
   max-height: 0;
   overflow: hidden;
