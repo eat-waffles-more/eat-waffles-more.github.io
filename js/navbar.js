@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Default avatar handling
   const defaultAvatar = "/images/favicon.png";
   let userAvatar = null;
   const avatarUrl = userAvatar ? userAvatar : defaultAvatar;
 
-  // Navbar HTML
   const navbarHTML = `
     <nav class="navbar">
       <div class="nav-left-bg">
@@ -28,13 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>
 
-      <div class="nav-center" style="flex-grow: 1; display: flex; justify-content: center;">
+      <div class="nav-center">
         <input type="text" id="searchBar" placeholder="Search this site..." autocomplete="off">
       </div>
 
       <div class="nav-right-bg">
         <a href="/profile" class="user-profile">
-          <img id="user-avatar" src="${avatarUrl}" alt="" class="avatar" style="height: 40px; width: 40px; border-radius: 50%;">
+          <img id="user-avatar" src="${avatarUrl}" alt="" class="avatar">
           <span id="user-name">Sign Up</span>
         </a>
       </div>
@@ -42,27 +40,21 @@ document.addEventListener('DOMContentLoaded', () => {
     <div id="results"></div>
   `;
 
-  // Add navbar to page
   document.body.insertAdjacentHTML('afterbegin', navbarHTML);
 
-  // Extra buttons show/hide toggle
   const extraIcon = document.querySelector('.extra');
   const extraButtons = document.querySelector('.extra-buttons');
 
-  extraButtons.style.display = 'none';
+  extraButtons.classList.remove('active');
   extraIcon.innerHTML = '<i class="fa fa-plus fa-lg"></i>';
 
   extraIcon.addEventListener('click', () => {
-    if (extraButtons.style.display === 'none' || extraButtons.style.display === '') {
-      extraButtons.style.display = 'flex';
-      extraIcon.innerHTML = '<i class="fa fa-minus fa-lg"></i>';
-    } else {
-      extraButtons.style.display = 'none';
-      extraIcon.innerHTML = '<i class="fa fa-plus fa-lg"></i>';
-    }
+    extraButtons.classList.toggle('active');
+    extraIcon.innerHTML = extraButtons.classList.contains('active')
+      ? '<i class="fa fa-minus fa-lg"></i>'
+      : '<i class="fa fa-plus fa-lg"></i>';
   });
 
-  // --- Search functionality ---
   const filesWithTags = [
     { path: "/home", name: "Home Page", tags: ["home", "main", "start", "front", "page", "index"] },
     { path: "/games", name: "Games", tags: ["play", "fun", "games", "game", "page", "yay"] },
@@ -93,14 +85,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const link = document.createElement('a');
         link.href = file.path;
         link.textContent = file.name;
-        link.style.display = 'block';
-        link.style.padding = '10px';
-        link.style.borderBottom = '1px solid #eee';
         resultsDiv.appendChild(link);
       });
     }
 
-    // Slide down animation
     resultsDiv.classList.add('active');
+  });
+
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 10) {
+      navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
+    } else {
+      navbar.style.boxShadow = '0 0 10px rgba(173, 216, 230, 0.5)';
+    }
   });
 });
