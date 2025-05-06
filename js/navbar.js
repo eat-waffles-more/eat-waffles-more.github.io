@@ -42,6 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       document.body.insertAdjacentHTML('afterbegin', navbarHTML);
 
+      // Adding the active class to trigger animation for navbar
+      setTimeout(() => {
+        document.querySelector('.navbar').classList.add('active');
+      }, 100); // Add delay for smooth animation
+
       const extraIcon = document.querySelector('.extra');
       const extraButtons = document.querySelector('.extra-buttons');
 
