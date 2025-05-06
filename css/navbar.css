@@ -44,11 +44,8 @@ body {
 .navbar {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 10px 20px;
   box-sizing: border-box;
   z-index: 1000;
@@ -56,14 +53,15 @@ body {
   backdrop-filter: blur(8px);
   box-shadow: 0 0 10px rgba(173, 216, 230, 0.5);
   animation: fadeSlideDown 0.8s ease-out;
-  transition: transform 0.5s ease-in-out;
   opacity: 0; /* Initially hidden */
   transform: translateY(-50px); /* Initially moved up */
+  width: fit-content; /* Only as wide as the content */
+  margin: 0 auto; /* Center it horizontally */
 }
 
 .navbar.active {
   opacity: 1; /* Make it visible */
-  transform: translateY(0); /* Reset position */
+  transform: translateX(-50%) translateY(0); /* Reset position */
 }
 
 /* NAVBAR Inner Blocks */
