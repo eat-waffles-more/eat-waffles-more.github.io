@@ -9,25 +9,6 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="/css/menu.css">
-    <script src="/js/main.js"></script>
-    <script src="/js/navbar.js" defer></script>
-<style>
-.favorite-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-    background: rgba(34, 34, 34, 0.5);
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-</style>
 </head>
 <body>
     <div id="navbar-container"></div>
@@ -46,10 +27,24 @@
         <div class="button-container" id="buttonContainer"></div>
     </center>
     <div id="particles-js"></div>
+
+    <!-- External JS files -->
     <script src="/js/profile.js"></script>
     <script src="/js/menu.js"></script>
     <script src="/js/particles.js"></script>
     <script src="/js/particles-config.js"></script>
+    
+    <!-- Load your main JavaScript file last to ensure DOM elements are ready -->
+    <script src="/js/main.js"></script>
 </body>
 </html>
-<br><br><br><footer style="background-color:lightblue; color:white; padding:20px; text-align:center; position:relative; bottom:0; width:100%;"> <p>Waffles, where dreams meet reality!</p> <nav> <a href="/privacy.html" style="color:white; margin:0 10px;">Privacy Policy</a> <a href="/terms.html" style="color:white; margin:0 10px;">Terms of Service</a> <a href="/contact.html" style="color:white; margin:0 10px;">Contact Us</a> </nav></footer>
+
+<br><br><br>
+<footer style="background-color:lightblue; color:white; padding:20px; text-align:center; position:relative; bottom:0; width:100%;">
+    <p>Waffles, where dreams meet reality!</p>
+    <nav>
+        <a href="/privacy.html" style="color:white; margin:0 10px;">Privacy Policy</a>
+        <a href="/terms.html" style="color:white; margin:0 10px;">Terms of Service</a>
+        <a href="/contact.html" style="color:white; margin:0 10px;">Contact Us</a>
+    </nav>
+</footer>
