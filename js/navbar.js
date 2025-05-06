@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const defaultAvatar = "/images/favicon.png";
-  let userAvatar = null;
-  const avatarUrl = userAvatar ? userAvatar : defaultAvatar;
+  const userAvatar = null; // Replace with logic to dynamically set avatar
+  const avatarUrl = userAvatar || defaultAvatar;
 
   const navbarHTML = `
     <nav class="navbar">
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       <div class="nav-right-bg">
         <a href="/profile" class="user-profile">
-          <img id="user-avatar" src="${avatarUrl}" alt="" class="avatar">
+          <img id="user-avatar" src="${avatarUrl}" alt="User Avatar" class="avatar">
           <span id="user-name">Sign Up</span>
         </a>
       </div>
@@ -50,6 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   extraIcon.addEventListener('click', () => {
     extraButtons.classList.toggle('active');
+    document.querySelector('.navbar').classList.toggle('navbar-hidden');
+
     extraIcon.innerHTML = extraButtons.classList.contains('active')
       ? '<i class="fa fa-minus fa-lg"></i>'
       : '<i class="fa fa-plus fa-lg"></i>';
@@ -64,12 +66,14 @@ document.addEventListener('DOMContentLoaded', () => {
     { path: "/privacy", name: "Privacy Policy", tags: ["your", "safe", "safety", "privacy", "policy", "private", "information", "info", "security", "page"] },
   ];
 
-  document.getElementById('searchBar').addEventListener('input', function(e) {
-    const query = e.target.value.toLowerCase();
-    const resultsDiv = document.getElementById('results');
+  const searchBar = document.getElementById('searchBar');
+  const resultsDiv = document.getElementById('results');
+
+  searchBar.addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase().trim();
     resultsDiv.innerHTML = '';
 
-    if (query.trim() === '') {
+    if (!query) {
       resultsDiv.classList.remove('active');
       return;
     }
@@ -94,10 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 10) {
-      navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
-    } else {
-      navbar.style.boxShadow = '0 0 10px rgba(173, 216, 230, 0.5)';
-    }
+    navbar.style.boxShadow = window.scrollY > 10
+      ? '0 2px 20px rgba(0, 0, 0, 0.3)'
+      : '0 0 10px rgba(173, 216, 230, 0.5)';
   });
 });
