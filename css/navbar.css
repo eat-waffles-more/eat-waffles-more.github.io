@@ -56,7 +56,11 @@ body {
   backdrop-filter: blur(8px);
   box-shadow: 0 0 10px rgba(173, 216, 230, 0.5);
   animation: fadeSlideDown 0.8s ease-out;
-  transition: box-shadow 0.3s ease;
+  transition: transform 0.5s ease-in-out;
+}
+
+.navbar-hidden {
+  transform: translateY(-100%);
 }
 
 /* NAVBAR Inner Blocks */
@@ -143,6 +147,7 @@ body {
   animation: rotateScale 0.6s ease;
 }
 
+/* Username */
 #user-name {
   color: white;
   font-weight: 600;
@@ -168,6 +173,7 @@ body {
   font-size: 1.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   transition: background-color 0.7s, box-shadow 0.7s, transform 0.7s;
+  transform: scale(1);
 }
 
 #searchBar::placeholder {
@@ -231,17 +237,16 @@ body {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transform: translateY(-10px);
+  transform: translateX(50px); /* Slide in from the right */
   transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
 }
 
 .extra-buttons.active {
   max-height: 200px;
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0); /* Reset to original position */
 }
 
-/* Additional spacing for content below navbar */
 .waffles {
   margin-top: 60px;
 }
