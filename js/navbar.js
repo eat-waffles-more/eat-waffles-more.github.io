@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   extraIcon.addEventListener('click', () => {
     extraButtons.classList.toggle('active');
+    navbar.classList.toggle('active');
 
     extraIcon.innerHTML = extraButtons.classList.contains('active')
       ? '<i class="fa fa-minus fa-lg"></i>'
