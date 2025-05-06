@@ -1,43 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
-
-@keyframes fadeSlideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes rotateScale {
-  0% { transform: scale(1) rotate(0deg); }
-  50% { transform: scale(1.1) rotate(10deg); }
-  100% { transform: scale(1) rotate(0deg); }
-}
-
-@keyframes bounce {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.15); }
-}
-
-body {
-  margin: 0;
-  font-family: 'Space Grotesk', sans-serif;
-}
-
 .navbar {
   position: fixed;
   top: 0;
@@ -49,14 +9,13 @@ body {
   padding: 10px 20px;
   box-sizing: border-box;
   z-index: 1000;
-  background-color: rgba(210, 180, 140, 0.7);
+  background-color: rgba(210, 180, 140, 0.7); /* Tan background with slight transparency */
   backdrop-filter: blur(8px);
-  box-shadow: 0 0 10px rgba(173, 216, 230, 0.5);
-  animation: fadeSlideDown 0.8s ease-out;
+  box-shadow: 0 0 10px rgba(173, 216, 230, 0.5); /* Light blue glow for shadow */
 }
 
 .nav-left-bg, .nav-right-bg {
-  background-color: rgba(173, 216, 230, 0.5);
+  background-color: rgba(173, 216, 230, 0.5); /* Light blue background with transparency */
   backdrop-filter: blur(6px);
   padding: 3px 7px;
   border-radius: 50px;
@@ -73,7 +32,7 @@ body {
 
 .nav-links, .extra-buttons {
   display: flex;
-  gap: 5px;
+  gap: 5px; /* Increased gap for better spacing */
 }
 
 .nav-links a, .extra-buttons a {
@@ -84,52 +43,60 @@ body {
   height: 50px;
   border-radius: 50%;
   text-decoration: none;
-  background-color: rgba(255, 105, 180, 0.7);
+  background-color: rgba(255, 105, 180, 0.7); /* Pink background for the icons */
   transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 0 10px rgba(173, 216, 230, 0.6);
-  animation: fadeIn 0.6s ease-in;
+  box-shadow: 0 0 10px rgba(173, 216, 230, 0.6); /* Light blue shadow for icons */
 }
 
 .nav-links a:hover, .extra-buttons a:hover {
-  background-color: rgba(210, 180, 140, 1);
-  box-shadow: 0 0 15px rgba(255, 105, 180,
-  box-shadow: 0 0 15px rgba(255, 105, 180, 0.8);
+  background-color: rgba(210, 180, 140, 1); /* Tan background on hover */
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.8); /* Pink shadow on hover */
   transform: scale(1.1);
 }
-.nav-links a:hover i, .extra-buttons a:hover i {
-  animation: bounce 0.4s ease;
-}
+
 .nav-links a i, .extra-buttons a i {
   color: white;
   font-size: 1.5em;
-  text-shadow: 0 0 5px rgba(255, 105, 180, 0.8);
+  text-shadow: 0 0 5px rgba(255, 105, 180, 0.8); /* Pink text shadow */
   transition: transform 0.3s ease;
+}
+
+.nav-links a:hover i, .extra-buttons a:hover i {
+  transform: scale(1.3);
 }
 .user-profile {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-right: 20px;
-  text-decoration: none;
+  align-items: center; /* Center align items vertically */
+  gap: 10px; /* Space between avatar and username */
+  margin-right: 20px; /* Add extra margin to separate profile from icons *
+  text-decoration: none; /* Remove underline from all links */
 }
+
+/* Avatar styling */
 .avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 2px solid white;
-  transition: all 0.3s ease;
+  border: 2px solid white; /* Border around avatar */
 }
 .avatar:hover {
-  border: 3px solid lightgreen;
-  animation: rotateScale 0.6s ease;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 3px solid lightgreen; /* Border around avatar */
 }
+
+/* Username styling */
 #user-name {
   color: white;
   font-weight: 600;
   font-size: 17px;
-  white-space: nowrap;
-  line-height: 40px;
-  display: inline-block;
+  white-space: nowrap; /* Prevents text from wrapping */
+  font-family: Space Grotesk;
+  text-decoration: none; /* Ensure no underline */
+  display: inline-block; /* Make sure it behaves like text */
+  line-height: 40px; /* Adjust line height to match avatar size */
+  text-decoration: none; /* Remove underline from all links */
 }
 #searchBar {
   background-color: rgba(173, 216, 230, 0.5);
@@ -147,17 +114,22 @@ body {
   transition: background-color 0.7s, box-shadow 0.7s, transform 0.7s;
   transform: scale(1);
 }
+
+/* Make the search placeholder white */
 #searchBar::placeholder {
   color: white;
   opacity: 1;
 }
+
 #searchBar:hover {
   transform: scale(1.02);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
 }
+
+/* Results container */
 #results {
-  position: fixed;
-  top: 80px;
+  position: fixed; /* <- CHANGED from absolute to fixed */
+  top: 80px; /* still under the navbar */
   left: 50%;
   transform: translateX(-50%) translateY(-10px);
   width: 90%;
@@ -172,16 +144,21 @@ body {
   pointer-events: none;
   transition: all 0.4s ease;
 }
+
+/* When active */
 #results.active {
   opacity: 1;
   pointer-events: auto;
   transform: translateX(-50%) translateY(0px);
 }
+
+
+/* Each search result link */
 #results a {
   display: block;
   padding: 10px;
   margin: 5px 0;
-  background-color: rgba(255, 105, 180, 0.6);
+  background-color: rgba(255, 105, 180, 0.6); /* Light pink background */
   color: white;
   text-decoration: none;
   font-weight: 600;
@@ -189,23 +166,10 @@ body {
   transition: all 0.3s ease;
   text-align: center;
   box-shadow: 0 0 8px rgba(173, 216, 230, 0.5);
-  animation: fadeIn 0.3s ease-in;
 }
+
 #results a:hover {
-  background-color: rgba(210, 180, 140, 1);
-  box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+  background-color: rgba(210, 180, 140, 1); /* Tan on hover */
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.7); /* Pink glow */
   transform: scale(1.05);
-}
-.extra-buttons {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease, opacity 0.5s ease;
-  opacity: 0;
-}
-.extra-buttons.active {
-  max-height: 200px;
-  opacity: 1;
-}
-.waffles {
-  margin-top: 60px;
 }
