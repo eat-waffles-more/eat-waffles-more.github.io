@@ -22,7 +22,6 @@
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
   }
 }
-
 @keyframes float {
   0% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
@@ -44,7 +43,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
-
 body {
     background-color: rgba(210, 180, 140, 1);
     width: 100%;
@@ -55,22 +53,16 @@ body {
     margin-right: 0px;
     margin-bottom: 0px;
     overflow-x: hidden;
-    text-decoration: none;
-    animation: fadeIn 1s ease-out;
+    text-decoration: none; /* Remove underline from all links */
 }
-
 footer {
     background-color: rgba(68, 85, 90, 0.5);
-    animation: fadeIn 1.5s ease-out;
 }
-
 h1 {
     color: #fff;
     font-size: 50px;
     font-family: Bebas Neue;
-    animation: fadeIn 1s ease-out;
 }
-
 #plus-description {
     background-color: lightblue;
     border: none;
@@ -79,18 +71,14 @@ h1 {
     margin-right: 100px;
     margin-bottom: 100px;
     padding: 40px;
-    animation: fadeIn 1s ease-out;
 }
-
 #plus-description p {
     color: #fff;
     font-size: 30px;
     font-family: Bebas Neue;
     margin-left: 50px;
     margin-right: 50px;
-    animation: fadeIn 1s ease-out;
 }
-
 .status {
     padding: 10px 20px;
     background-color: rgba(210, 180, 140, 1);
@@ -98,9 +86,7 @@ h1 {
     transition: background-color 0.7s;
     border: 3px solid lightblue;
     border-radius: 5px;
-    animation: fadeIn 1s ease-out;
 }
-
 .status:hover {
     padding: 10px 20px;
     background-color: lightblue;
@@ -108,9 +94,7 @@ h1 {
     transition: background-color 0.7s;
     border: none;
     border-radius: 5px;
-    animation: pulse 1s infinite;
 }
-
 #particles-js {
   position: fixed;
   top: 0;
@@ -118,59 +102,44 @@ h1 {
   width: 100%;
   height: 100%;
   z-index: -1;
-  animation: float 2s infinite;
 }
-
 #popup button {
     background-color: lightblue;
     border: 2px solid white;
     padding: 5px;
     border-radius: 5px;
-    animation: fadeIn 1.2s ease-out;
 }
-
 #popup button:hover {
     background-color: rgba(210, 180, 140, 1);
     border: 2px solid white;
     padding: 4.5px;
     border-radius: 5px;
-    animation: pulse 1s infinite;
 }
-
 .music {
     width: 150px;
     height: 150px;
     border-radius: 20px;
-    animation: fadeIn 1s ease-out;
 }
-
 .music:hover {
     transform: scale(1.1);
-    animation: pulse 1s infinite;
 }
-
 div.gallery {
   border: 5px solid green;
-  transition: all 0.3s ease;
-  animation: fadeIn 1s ease-out;
 }
 
 div.gallery:hover {
   border: 5px solid lightblue;
-  animation: pulse 1s infinite;
 }
 
 div.gallery img {
   width: 100%;
   height: auto;
-  animation: fadeIn 1s ease-out;
 }
 
 div.desc {
   padding: 15px;
   text-align: center;
   font-family: Space Grotesk;
-  animation: fadeIn 1s ease-out;
 }
 
 * {
@@ -181,7 +150,6 @@ div.desc {
   padding: 0 6px;
   float: left;
   width: 24.99999%;
-  animation: fadeIn 1s ease-out;
 }
 
 @media only screen and (max-width: 700px) {
@@ -202,12 +170,9 @@ div.desc {
   display: table;
   clear: both;
 }
-
 .waffles {
     margin-top: 30px;
-    animation: fadeIn 1s ease-out;
 }
-
 .popup {
     position: absolute;
     top: -20px;
@@ -222,9 +187,7 @@ div.desc {
     transition: opacity 0.3s;
     opacity: 1;
     display: none;
-    animation: fadeIn 1s ease-out;
 }
-
 .side-menu {
     height: 100%;
     width: 0;
@@ -237,12 +200,10 @@ div.desc {
     padding-top: 60px;
     transition: 0.4s;
     color: white;
-    animation: fadeIn 1.5s ease-out;
 }
 
 .side-menu h2 {
     padding-left: 20px;
-    animation: fadeIn 1.5s ease-out;
 }
 
 .side-menu input,
@@ -251,7 +212,6 @@ div.desc {
     width: 80%;
     padding: 10px;
     font-size: 16px;
-    animation: fadeIn 1.5s ease-out;
 }
 
 .close-btn {
@@ -263,7 +223,6 @@ div.desc {
     color: white;
     border: none;
     cursor: pointer;
-    animation: fadeIn 1.5s ease-out;
 }
 
 .menu-toggle {
@@ -277,13 +236,12 @@ div.desc {
     font-size: 20px;
     cursor: pointer;
     z-index: 1001;
-    animation: fadeIn 1s ease-out;
 }
-
 #form {
     width: 50%;
     height: 100%;
     outline: none;
     border: none;
-    animation: fadeIn 1s ease-out;
 }
+
+
