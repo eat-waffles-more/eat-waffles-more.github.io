@@ -161,4 +161,11 @@ body {
     border-radius: 15%;
     top: 50%;
 }
-
+@Keyframes begin {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
