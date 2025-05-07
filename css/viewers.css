@@ -30,6 +30,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: begin 0.3s ease-out;
 }
 
 #game-container #iframe-container {
