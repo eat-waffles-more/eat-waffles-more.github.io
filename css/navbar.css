@@ -12,7 +12,7 @@
   background-color: rgba(210, 180, 140, 0.7); /* Tan background with slight transparency */
   backdrop-filter: blur(8px);
   box-shadow: 0 0 10px rgba(173, 216, 230, 0.5); /* Light blue glow for shadow */
-  animation: fadeIn 0.5s ease-out;
+  animation: fade 0.5s ease-out;
 }
 
 .nav-left-bg, .nav-right-bg {
@@ -168,7 +168,7 @@
   text-align: center;
   box-shadow: 0 0 8px rgba(173, 216, 230, 0.5);
 }
-@keyframes fadeIn {
+@keyframes fade {
   0% {
     opacity: 0;
     transform: translateY(-50px);
