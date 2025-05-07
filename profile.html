@@ -1,144 +1,104 @@
 <!DOCTYPE html>
+<html>
+    <head>
+        <title>Waffles</title>
+        
+        <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/navbar.css">
+        <script src="/js/main.js"></script>
+    </head>
+<script src="/js/navbar.js"></script><div id="navbar-container"></div>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Waffles</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/navbar.css">
-  <script src="/js/main.js" defer></script>
-  <script src="/js/navbar.js" defer></script>
-  <script src="/js/particles.js" defer></script>
-  <script src="/js/particles-config.js" defer></script>
-  <script src="/js/profile.js" defer></script>
-  <style>
-    #edit {
-      width: 35%;
-      background-color: pink;
-      padding: 20px;
-      border-radius: 20px;
-      font-family: Arial, sans-serif;
-      margin: auto;
-    }
-
-    #edit label {
-      display: block;
-      margin-bottom: 8px;
-      color: tan;
-      font-weight: bold;
-    }
-
-    #edit input[type="text"],
-    #edit input[type="file"] {
-      width: 50%;
-      padding: 10px;
-      margin-bottom: 12px;
-      border: 1px solid rgba(210, 180, 140, 1);
-      border-radius: 4px;
-      font-size: 14px;
-      outline: none;
-      background-color: lightblue;
-    }
-
-    #edit button {
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      background-color: rgba(210, 180, 140, 1);
-      color: lightblue;
-      border: 3px solid lightblue;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-      transition: background-color 0.7s, box-shadow 0.7s, transform 0.7s;
-    }
-
-    #edit button:hover {
-      background-color: lightblue;
-      color: rgba(210, 180, 140, 1);
-      border: 2px solid lightblue;
-      transform: scale(0.9);
-    }
-
-    #profile-modal {
-      display: none;
-      position: fixed;
-      top: 10%;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 10;
-    }
-
-    #edit button.close {
-      background-color: #ccc;
-      color: black;
-      float: right;
-    }
-
-    #user-profile {
-      margin-top: 40px;
-      text-align: center;
-    }
-
-    #user-avatar {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 4px solid tan;
-    }
-
-    #user-name {
-      font-size: 24px;
-      color: tan;
-      margin-top: 10px;
-    }
-
-    .edit-profile-btn {
-      margin-top: 10px;
-      padding: 8px 16px;
-      font-size: 14px;
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+     
+    </style>
 </head>
 <body>
-  <div id="navbar-container"></div>
 
-  <div id="particles-js"></div>
 
-  <div id="user-profile">
-    <img id="user-avatar" src="/images/user.png" alt="User Avatar">
-    <div id="user-name">Guest</div>
-    <button class="edit-profile-btn" onclick="editProfile()">Edit Profile</button>
-  </div>
 
-  <!-- Profile Modal -->
-  <div id="profile-modal">
-    <div id="edit">
-      <button class="close" onclick="closeModal()">×</button>
-      <label for="avatar-url">Avatar URL or Upload File</label>
-      <input type="text" id="avatar-url" placeholder="Enter Avatar URL (optional)">
-      <input type="file" id="avatar-file" accept="image/*">
-      <label for="user-name-input">Name</label>
-      <input type="text" id="user-name-input" placeholder="Enter Your Name">
-      <p>Before creating an account, you must agree to the
-        <a href="/terms">Terms of Service</a> and
-        <a href="/privacy">Privacy Policy</a>
-      </p><br>
-      <button onclick="saveProfile()">Save</button>
-    </div>
-  </div>
+    <script src="/js/profile.js"></script>
+</div>
+<center>
+    
+<br><br>
+<img class="waffles" src="/images/favicon.png" width="150px" height="150px">
+<br><br>
+</center>
+<div id="particles-js"></div>
+<script src="/js/particles.js"></script>
+<script src="/js/particles-config.js"></script>
+<style>
+  #edit {
+    width: 35%;
+    background-color: pink;  /* Light blue background */
+    padding: 20px;
+    border-radius: 20px;
+    font-family: Arial, sans-serif;
+  }
 
-  <footer style="background-color:lightblue; color:white; padding:20px; text-align:center; position:relative; bottom:0; width:100%;">
-    <p>Waffles, where dreams meet reality!</p>
-    <nav>
-      <a href="/privacy.html" style="color:white; margin:0 10px;">Privacy Policy</a>
-      <a href="/terms.html" style="color:white; margin:0 10px;">Terms of Service</a>
-      <a href="/contact.html" style="color:white; margin:0 10px;">Contact Us</a>
-    </nav>
-  </footer>
-</body>
-</html>
+  #edit label {
+    display: block;
+    margin-bottom: 8px;
+    color: tan;  /* Tan color for labels */
+    font-weight: bold;
+  }
+
+  #edit input[type="text"],
+  #edit input[type="file"] {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(210, 180, 140, 1);
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    background-color: lightblue;
+  }
+
+  #edit button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: rgba(210, 180, 140, 1);
+    color: lightblue;
+    border: 3px solid lightblue;
+    transition: background-color 0.5s;
+    margin-left: 10px;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.7s, box-shadow 0.7s, transform 0.7s;
+    transform: scale(1);
+  }
+
+  #edit button:hover {
+    background-color: lightblue;
+    color: rgba(210, 180, 140, 1);
+    border:2px solid lightblue;
+    transform: scale(0.9);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.7s, box-shadow 0.7s, transform 0.7s;
+    transform: scale(0.9);
+  }
+</style>
+<center>
+<div id="edit">
+  <label for="avatar-url">Avatar URL or Upload File</label>
+  <input type="text" id="avatar-url" placeholder="Enter Avatar URL (optional)">
+  <input type="file" id="avatar-file" accept="image/*">
+  <label for="user-name-input">Name</label>
+  <input type="text" id="user-name-input" placeholder="Enter Your Name">
+  <div></div>
+  <p>Before creating an account, you must agree to the <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a></p><br>
+  <button onclick="saveProfile()">Save</button>
+</div>
+</center>
+<br><br><br><footer style="background-color:lightblue; color:white; padding:20px; text-align:center; position:relative; bottom:0; width:100%;"> <p>Waffles, where dreams meet reality!</p> <nav> <a href="/privacy.html" style="color:white; margin:0 10px;">Privacy Policy</a> <a href="/terms.html" style="color:white; margin:0 10px;">Terms of Service</a> <a href="/contact.html" style="color:white; margin:0 10px;">Contact Us</a> </nav></footer>
+
+
