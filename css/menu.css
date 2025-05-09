@@ -105,7 +105,10 @@ button {
     cursor: pointer;
     border-radius: 5px;
 }
-
+.button-animate {
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
 #sortOptions {
     padding: 9px;
     font-size: 16px;
