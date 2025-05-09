@@ -206,13 +206,3 @@ div.desc {
     outline: none;
     border: none;
 }
-/* Use Font Awesome's mouse pointer icon as the cursor */
-body {
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 320 512"><path fill="black" d="M302.6 327.4c9.4-9.4 9.4-24.6 0-33.9L102.6 93.3C91 81.7 72 89.2 72 105.4V240H24c-21.4 0-32.1 25.9-17 41l168 168c15.1 15.1 41 4.4 41-17V240h134.6c16.2 0 23.7-19 12.1-30.6L302.6 327.4z"/></svg>') 0 0, auto;
-}
-
-/* Optional: different cursor when hovering over links or buttons */
-a:hover,
-button:hover {
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 384 512"><path fill="black" d="M384 336v16c0 8.8-7.2 16-16 16H208v96c0 14.3-17.3 21.4-27.3 11.3l-160-160c-6.2-6.2-6.2-16.4 0-22.6l160-160c10-10 27.3-2.9 27.3 11.3v96H368c8.8 0 16 7.2 16 16z"/></svg>') 0 0, pointer;
-}
