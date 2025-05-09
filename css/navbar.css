@@ -4,8 +4,8 @@
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); box-shadow: 0 0 10px rgba(255, 105, 180, 0.6); }
-  50% { transform: scale(1.05); box-shadow: 0 0 20px rgba(255, 105, 180, 1); }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 
 @keyframes float {
