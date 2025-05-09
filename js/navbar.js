@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <a href="/home"><i class="fa fa-home fa-lg"></i></a>
           <a href="/games"><i class="fa fa-gamepad fa-lg"></i></a>
           <a href="/theater.html"><i class="fa fa-tv fa-lg"></i></a>
+          <a href="/profile"><i class="fa fa-s fa-lg"></i></a>
           <a href="/forms"><i class="fa fa-clipboard-list fa-lg"></i></a>
           <a href="/reviews"><i class="fa fa-star fa-lg"></i></a>
           <a href="/profile"><i class="fa fa-user fa-lg"></i></a>
