@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function () {
              buttonContainer.appendChild(createButton(button));
          });
  
-         counterDisplay.textContent = ${filteredButtons.length} Games Loaded;
+         counterDisplay.textContent = ${filteredButtons.length} 'Games Loaded';
      }
  
      searchInput.addEventListener('input', (e) => {
