@@ -1,4 +1,4 @@
- document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
      const buttons = [
          { name: '2048', image: '/images/2048.png', link: '/sourceCode/2048', path: '/play', favorite: false },
          { name: 'Snow Rider', image: '/images/snowrider.png', link: 'https://www.hoodamath.com/mobile/games/snow-rider-3d/game.html?nocheckorient=1', path: '/play', favorite: false },
