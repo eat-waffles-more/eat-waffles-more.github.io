@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Default avatar handling
   const defaultAvatar = "/images/favicon.png";
-  let userAvatar = null;
+  let userAvatar = localStorage.getItem("avatar") || null;  // Fetch avatar from localStorage
   const avatarUrl = userAvatar ? userAvatar : defaultAvatar;
 
-  // Navbar HTML
+  const userName = localStorage.getItem("name") || "Sign Up";  // Fetch username from localStorage
+
+  // Navbar HTML with dynamic user details
   const navbarHTML = `
     <nav class="navbar">
       <div class="nav-left-bg">
@@ -35,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="nav-right-bg">
         <a href="/profile" class="user-profile">
           <img id="user-avatar" src="${avatarUrl}" alt="" class="avatar" style="height: 40px; width: 40px; border-radius: 50%;">
-          <span id="user-name">Sign Up</span>
+          <span id="user-name">${userName}</span>
         </a>
       </div>
     </nav>
