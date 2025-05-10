@@ -1,4 +1,4 @@
-const API_URL = "https://your-app-name.vercel.app/api/users"; // Replace with your Vercel API URL
+const API_URL = "https://waffles-database.vercel.app/api/users";
 
             // Signup form submission
             document.getElementById("signup-form").addEventListener("submit", async (e) => {
