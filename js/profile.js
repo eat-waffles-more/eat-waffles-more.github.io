@@ -1,75 +1,84 @@
-const API_URL = "https://waffles-database.vercel.app/api/users";
+// Navbar.js: To handle the avatar and name display
+document.addEventListener('DOMContentLoaded', () => {
+  const defaultAvatar = "/images/favicon.png";
+  let userAvatar = localStorage.getItem('avatar');
+  const avatarUrl = userAvatar ? userAvatar : defaultAvatar;
 
-            // Signup form submission
-            document.getElementById("signup-form").addEventListener("submit", async (e) => {
-                e.preventDefault();
-                const username = document.getElementById("username").value;
-                const email = document.getElementById("email").value;
-                const password = document.getElementById("password").value;
+  // Navbar HTML
+  const navbarHTML = `
+    <nav class="navbar">
+      <div class="nav-left-bg">
+        <a href="/index.html" class="logo">
+          <img src="/images/favicon.png" alt="Waffles Logo">
+        </a>
+        <div class="nav-links">
+          <a href="/home"><i class="fa fa-home fa-lg"></i></a>
+          <a href="/games"><i class="fa fa-gamepad fa-lg"></i></a>
+          <a href="/theater.html"><i class="fa fa-tv fa-lg"></i></a>
+          <a href="/forms"><i class="fa fa-clipboard-list fa-lg"></i></a>
+          <a href="/reviews"><i class="fa fa-star fa-lg"></i></a>
+          <a href="/profile"><i class="fa fa-user fa-lg"></i></a>
+          <a href="javascript:void(0);" class="extra"><i class="fa fa-plus fa-lg"></i></a>
+          <div class="extra-buttons">
+            <a target="_blank" href="https://github.com/eat-waffles-more"><i class="fa-brands fa-github fa-lg"></i></a>
+            <a href="/terms"><i class="fa-solid fa-clipboard-check"></i></a>
+            <a href="/privacy"><i class="fa-solid fa-user-lock"></i></a>
+            <a href="/contact"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
 
-                const res = await fetch(`${API_URL}/register`, {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ username, email, password })
-                });
+      <div class="nav-center" style="flex-grow: 1; display: flex; justify-content: center;">
+        <input type="text" id="searchBar" placeholder="Search this site..." autocomplete="off">
+      </div>
 
-                const data = await res.json();
-                if (res.ok) {
-                    alert("Account created! Your ID: " + data.id);
-                    // You can save data.id or other user info in localStorage or cookies
-                } else {
-                    alert("Error: " + (data.message || res.status));
-                }
-            });
+      <div class="nav-right-bg">
+        <a href="/profile" class="user-profile">
+          <img id="user-avatar" src="${avatarUrl}" alt="" class="avatar" style="height: 40px; width: 40px; border-radius: 50%;">
+          <span id="user-name">${localStorage.getItem('name') || 'Sign Up'}</span>
+        </a>
+      </div>
+    </nav>
+    <div id="results"></div>
+  `;
 
-            // Login form submission
-            document.getElementById("login-form").addEventListener("submit", async (e) => {
-                e.preventDefault();
-                const email = document.getElementById("login-email").value;
-                const password = document.getElementById("login-password").value;
+  document.body.insertAdjacentHTML('afterbegin', navbarHTML);
 
-                const res = await fetch(`${API_URL}/login`, {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ email, password })
-                });
+  // Search functionality
+  const filesWithTags = [
+    { path: "/home", name: "Home Page", tags: ["home", "main", "start"] },
+    { path: "/games", name: "Games", tags: ["play", "fun", "games"] },
+    { path: "/reviews", name: "Reviews", tags: ["star", "reviews"] },
+    { path: "/profile", name: "Your Profile", tags: ["profile"] },
+    { path: "/terms", name: "Terms", tags: ["terms"] },
+    { path: "/privacy", name: "Privacy", tags: ["privacy"] },
+  ];
 
-                const data = await res.json();
-                if (res.ok) {
-                    alert("Welcome " + data.username);
-                    // Save user data (ID, token, etc.) in localStorage or sessionStorage
-                    localStorage.setItem("userId", data.id);
-                } else {
-                    alert("Login failed.");
-                }
-            });
+  document.getElementById('searchBar').addEventListener('input', function(e) {
+    const query = e.target.value.toLowerCase();
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = '';
+    
+    if (query.trim() === '') {
+      resultsDiv.classList.remove('active');
+      return;
+    }
 
-            // Profile management
-            window.onload = function() {
-                const avatar = localStorage.getItem('avatar');
-                const name = localStorage.getItem('name');
-                if (avatar) {
-                    document.getElementById('user-avatar').src = avatar;
-                } else {
-                    document.getElementById('user-avatar').src = '/images/user.png'; // Default avatar
-                }
-                if (name) {
-                    document.getElementById('user-name').innerText = name;
-                }
-            };
+    const matchedFiles = filesWithTags.filter(file =>
+      file.tags.some(tag => tag.includes(query))
+    );
 
-           function saveProfile() {
-  const name = document.getElementById('user-name-input').value;
-  const avatarUrl = document.getElementById('avatar-url').value;
+    if (matchedFiles.length === 0) {
+      resultsDiv.innerHTML = '<p>No results found.</p>';
+    } else {
+      matchedFiles.forEach(file => {
+        const link = document.createElement('a');
+        link.href = file.path;
+        link.textContent = file.name;
+        resultsDiv.appendChild(link);
+      });
+    }
 
-  if (name) {
-    localStorage.setItem('name', name);
-  }
-
-  if (avatarUrl) {
-    localStorage.setItem('avatar', avatarUrl);
-  }
-
-  // Redirect to profile page or update navbar immediately
-  window.location.href = '/profile';
-}
+    resultsDiv.classList.add('active');
+  });
+});
