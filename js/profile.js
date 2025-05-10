@@ -58,26 +58,18 @@ const API_URL = "https://waffles-database.vercel.app/api/users";
                 }
             };
 
-            function saveProfile() {
-                const avatarUrl = document.getElementById('avatar-url').value;
-                const avatarFile = document.getElementById('avatar-file').files[0];
-                const name = document.getElementById('user-name-input').value;
+           function saveProfile() {
+  const name = document.getElementById('user-name-input').value;
+  const avatarUrl = document.getElementById('avatar-url').value;
 
-                if (avatarFile) {
-                    const reader = new FileReader();
-                    reader.onloadend = function() {
-                        localStorage.setItem('avatar', reader.result);
-                        document.getElementById('user-avatar').src = reader.result;
-                    };
-                    reader.readAsDataURL(avatarFile);
-                } else if (avatarUrl) {
-                    localStorage.setItem('avatar', avatarUrl);
-                    document.getElementById('user-avatar').src = avatarUrl;
-                }
+  if (name) {
+    localStorage.setItem('name', name);
+  }
 
-                localStorage.setItem('name', name);
-                document.getElementById('user-name').innerText = name;
-                        localStorage.setItem("name", "User's Name");
-localStorage.setItem("avatar", "path/to/avatar/image.jpg"); // Avatar image URL
+  if (avatarUrl) {
+    localStorage.setItem('avatar', avatarUrl);
+  }
 
-            }
+  // Redirect to profile page or update navbar immediately
+  window.location.href = '/profile';
+}
