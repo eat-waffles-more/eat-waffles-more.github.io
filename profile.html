@@ -1,36 +1,107 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Waffles</title>
-        <link rel="icon" type="image/x-icon" href="/images/favicon.png">
-        <link rel="stylesheet" href="/css/main.css">
-        <link rel="stylesheet" href="/css/navbar.css">
-        <script src="/js/main.js"></script>
-        <script src="/js/navbar.js"></script>
-        <script src="/js/profile" defer></script>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waffles</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <script src="/js/main.js"></script>
+    <script src="/js/navbar.js"></script>
+    <script src="/js/profile.js" defer></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Center the content */
+        center {
+            display: block;
+            margin-top: 50px;
+        }
+
+        img.waffles {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        /* Sign Up & Login Form Styles */
+        #signup, #login {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            width: 350px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto 20px;
+        }
+
+        #signup h2, #login h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
 
     <div id="navbar-container"></div>
 
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            /* Your existing styles */
-        </style>
-    </head>
-    <body>
-        <center>
-            <br><br>
-            <img class="waffles" src="/images/favicon.png" width="150px" height="150px">
-            <br><br>
-        </center>
-        <div id="particles-js"></div>
-        <script src="/js/particles.js"></script>
-        <script src="/js/particles-config.js"></script>
-
-        <center>
+    <center>
+        <img class="waffles" src="/images/favicon.png" alt="Waffles Logo">
         <div id="signup">
             <h2>Sign Up</h2>
             <form id="signup-form">
@@ -49,27 +120,16 @@
                 <button type="submit">Login</button>
             </form>
         </div>
+    </center>
 
-        <div id="edit">
-            <label for="avatar-url">Avatar URL or Upload File</label>
-            <input type="text" id="avatar-url" placeholder="Enter Avatar URL (optional)">
-            <input type="file" id="avatar-file" accept="image/*">
-            <label for="user-name-input">Name</label>
-            <input type="text" id="user-name-input" placeholder="Enter Your Name">
-            <p>Before creating an account, you must agree to the <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a></p><br>
-            <button onclick="saveProfile()">Save</button>
-        </div>
+    <footer>
+        <p>Waffles, where dreams meet reality!</p>
+        <nav>
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms of Service</a>
+            <a href="/contact.html">Contact Us</a>
+        </nav>
+    </footer>
 
-        </center>
-        
-        <br><br><br>
-        <footer style="background-color:lightblue; color:white; padding:20px; text-align:center; position:relative; bottom:0; width:100%;">
-            <p>Waffles, where dreams meet reality!</p>
-            <nav>
-                <a href="/privacy.html" style="color:white; margin:0 10px;">Privacy Policy</a>
-                <a href="/terms.html" style="color:white; margin:0 10px;">Terms of Service</a>
-                <a href="/contact.html" style="color:white; margin:0 10px;">Contact Us</a>
-            </nav>
-        </footer>
-    </body>
+</body>
 </html>
