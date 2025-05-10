@@ -1,10 +1,10 @@
+// Navbar.js: To handle the avatar and name display
 document.addEventListener('DOMContentLoaded', () => {
-  // Default avatar handling
   const defaultAvatar = "/images/favicon.png";
-  let userAvatar = localStorage.getItem('avatar') || defaultAvatar;  // Get avatar from localStorage or fallback to default
-  let userName = localStorage.getItem('name') || "Sign Up";  // Get name from localStorage or set default to "Sign Up"
+  let userAvatar = localStorage.getItem('avatar');
+  const avatarUrl = userAvatar ? userAvatar : defaultAvatar;
 
-  // Navbar HTML with dynamic user avatar and name
+  // Navbar HTML
   const navbarHTML = `
     <nav class="navbar">
       <div class="nav-left-bg">
@@ -34,49 +34,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
       <div class="nav-right-bg">
         <a href="/profile" class="user-profile">
-          <img id="user-avatar" src="${userAvatar}" alt="User Avatar" class="avatar" style="height: 40px; width: 40px; border-radius: 50%;">
-          <span id="user-name">${userName}</span>
+          <img id="user-avatar" src="${avatarUrl}" alt="" class="avatar" style="height: 40px; width: 40px; border-radius: 50%;">
+          <span id="user-name">${localStorage.getItem('name') || 'Sign Up'}</span>
         </a>
       </div>
     </nav>
     <div id="results"></div>
   `;
 
-  // Add navbar to page
   document.body.insertAdjacentHTML('afterbegin', navbarHTML);
 
-  // Extra buttons show/hide toggle
-  const extraIcon = document.querySelector('.extra');
-  const extraButtons = document.querySelector('.extra-buttons');
-
-  extraButtons.style.display = 'none';
-  extraIcon.innerHTML = '<i class="fa fa-plus fa-lg"></i>';
-
-  extraIcon.addEventListener('click', () => {
-    if (extraButtons.style.display === 'none' || extraButtons.style.display === '') {
-      extraButtons.style.display = 'flex';
-      extraIcon.innerHTML = '<i class="fa fa-minus fa-lg"></i>';
-    } else {
-      extraButtons.style.display = 'none';
-      extraIcon.innerHTML = '<i class="fa fa-plus fa-lg"></i>';
-    }
-  });
-
-  // --- Search functionality ---
+  // Search functionality
   const filesWithTags = [
-    { path: "/home", name: "Home Page", tags: ["home", "main", "start", "front", "page", "index"] },
-    { path: "/games", name: "Games", tags: ["play", "fun", "games", "game", "page", "yay"] },
-    { path: "/reviews", name: "Reviews", tags: ["star", "reviews", "review", "rate", "us", "page", "share", "your", "my", "thoughts"] },
-    { path: "/profile", name: "Your Profile", tags: ["you", "your", "profile", "account", "edit", "my", "me", "page"] },
-    { path: "/terms", name: "Terms of Service", tags: ["rules", "terms", "of", "and", "conditions", "page", "service", "legal", "licence"] },
-    { path: "/privacy", name: "Privacy Policy", tags: ["your", "safe", "safety", "privacy", "policy", "private", "information", "info", "security", "page"] },
+    { path: "/home", name: "Home Page", tags: ["home", "main", "start"] },
+    { path: "/games", name: "Games", tags: ["play", "fun", "games"] },
+    { path: "/reviews", name: "Reviews", tags: ["star", "reviews"] },
+    { path: "/profile", name: "Your Profile", tags: ["profile"] },
+    { path: "/terms", name: "Terms", tags: ["terms"] },
+    { path: "/privacy", name: "Privacy", tags: ["privacy"] },
   ];
 
   document.getElementById('searchBar').addEventListener('input', function(e) {
     const query = e.target.value.toLowerCase();
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = '';
-
+    
     if (query.trim() === '') {
       resultsDiv.classList.remove('active');
       return;
@@ -87,20 +69,16 @@ document.addEventListener('DOMContentLoaded', () => {
     );
 
     if (matchedFiles.length === 0) {
-      resultsDiv.innerHTML = '<p style="padding: 10px;">No results found.</p>';
+      resultsDiv.innerHTML = '<p>No results found.</p>';
     } else {
       matchedFiles.forEach(file => {
         const link = document.createElement('a');
         link.href = file.path;
         link.textContent = file.name;
-        link.style.display = 'block';
-        link.style.padding = '10px';
-        link.style.borderBottom = '1px solid #eee';
         resultsDiv.appendChild(link);
       });
     }
 
-    // Slide down animation
     resultsDiv.classList.add('active');
   });
 });
