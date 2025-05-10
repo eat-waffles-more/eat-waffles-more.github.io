@@ -77,4 +77,7 @@ const API_URL = "https://waffles-database.vercel.app/api/users";
 
                 localStorage.setItem('name', name);
                 document.getElementById('user-name').innerText = name;
+                        localStorage.setItem("name", "User's Name");
+localStorage.setItem("avatar", "path/to/avatar/image.jpg"); // Avatar image URL
+
             }
