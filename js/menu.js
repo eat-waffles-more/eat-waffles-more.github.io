@@ -58,6 +58,8 @@
          { name: 'Idle Breakout', image: '/images/idlebreakout.png', link: '/sourceCode/idle-breakout', path: '/play', favorite: false },
          { name: 'Doodle Jump', image: '/images/doodlejump.png', link: '/sourceCode/doodle-jump', path: '/play', favorite: false },
          { name: 'Donkey Kong', image: '/images/donkeykong.png', link: '/sourceCode/donkey-kong', path: '/play', favorite: false },
+         { name: 'Stack It', image: '/images/stackit.png', link: '/sourceCode/stack-it', path: '/play', favorite: false },
+         { name: 'Resizer', image: '/images/resizer.png', link: '/sourceCode/resizer', path: '/play', favorite: false },
      ];
     const buttonContainer = document.getElementById('buttonContainer');
     const searchInput = document.getElementById('search');
