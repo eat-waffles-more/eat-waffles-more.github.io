@@ -55,6 +55,9 @@
          { name: 'Infinate Craft', image: '/images/infinatecraft.png', link: '/sourceCode/infinate-craft', path: '/play', favorite: false },
          { name: 'Pig Clicker', image: '/images/pigclicker.png', link: '/sourceCode/pig-clicker', path: '/play', favorite: false },
          { name: 'Freehead Skate', image: '/images/freeheadskate.png', link: '/sourceCode/freehead-skate', path: '/play', favorite: false },
+         { name: 'Idle Breakout', image: '/images/idlebreakout.png', link: '/sourceCode/idle-breakout', path: '/play', favorite: false },
+         { name: 'Doodle Jump', image: '/images/doodlejump.png', link: '/sourceCode/doodle-jump', path: '/play', favorite: false },
+         { name: 'Donkey Kong', image: '/images/donkeykong.png', link: '/sourceCode/donkey-kong', path: '/play', favorite: false },
      ];
     const buttonContainer = document.getElementById('buttonContainer');
     const searchInput = document.getElementById('search');
