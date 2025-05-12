@@ -1,36 +1,5 @@
 document.title = "Waffles"
 
-/* Animate the page's title!
-let titleText = "Waffless";
-let opacity = 0;
-let fadeIn = true;
-let delay = 0.007;
-
-function updateTitle() {
-    let displayText = titleText.charAt(0) + titleText.slice(1, Math.floor(opacity * (titleText.length - 1)) + 1);
-    document.title = displayText;
-
-    if (fadeIn) {
-        opacity += delay;
-        if (opacity >= 1) {
-            fadeIn = false;
-        }
-    } else {
-        opacity -= delay;
-        if (opacity <= 0) {
-            fadeIn = true;
-        }
-    }
-
-    requestAnimationFrame(updateTitle);
-}
-
-// Automatically start updating the title when the page loads
-document.addEventListener('DOMContentLoaded', () => {
-    requestAnimationFrame(updateTitle);
-});
-*/
-
 document.addEventListener("DOMContentLoaded", function() {
     const body = document.body;
     const sayings = [
@@ -43,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "You Can't Buy Happiness, But You Can Buy Waffles",
         "Thou shalt eat waffles.",
         "Waffles: The breakfast of champions",
-        "Love is like a waffle—hot, sweet, and comforting.",
+        "Love is like a waffle — hot, sweet, and comforting.",
         "Waffles: Because some decisions in life are easy.",
         "Every day is waffle day if you want it to be.",
         "A day without waffles is a day without sunshine.",
